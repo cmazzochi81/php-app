@@ -1,0 +1,13 @@
+#SuPHP_ConfigPath /home/themaran/public_html/www.chrismazzochi.com
+AddHandler application/x-httpd-php54 .php
+## This is the .htaccess you need when putting a php.ini on an account. Only copy the stuff below these first 2 lines, and please put it
+## at the top of the .htaccess above everything else.
+## Make sure you change the suPHP_ConfigPath to the proper path to the php.ini file
+
+<IfModule mod_suphp.c>
+ suPHP_ConfigPath /home/themaran/public_html/www.chrismazzochi.com/public
+ <Files php.ini>
+   order allow,deny
+   deny from all
+ </Files>
+</IfModule>
