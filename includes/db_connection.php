@@ -13,7 +13,7 @@ $mysql_url = parse_url($_ENV["DATABASE_URL"]);
 $db = substr($mysql_url['path'], 1);
 define('DB_NAME', $db);
 define('DB_USER', $mysql_url['user']);
-define('DB_PASSWORD', $mysql_url['pass']);
+define('DB_PASS', $mysql_url['pass']);
 define('DB_SERVER', $mysql_url['host'] . ":" . $mysql_url['port']);
 
 
