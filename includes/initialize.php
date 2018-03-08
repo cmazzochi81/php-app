@@ -1,7 +1,10 @@
 <?php
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
-//C:\wamp64\www\mazzo_php_app_dev\public
-defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'wamp64'.DS.'www'.DS.'mazzo_php_app_dev');
+
+// defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'wamp64'.DS.'www'.DS.'mazzo_php_app_dev');
+
+defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'var'.DS.'www'.DS.'html');
+
 //defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'Users'.DS.'chrismazzochi'.DS.'Sites'.DS.'mazzo_php_app_dev');
 //defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'home'.DS.'cmazzo81'.DS.'public_html');
 defined('LIB_PATH')? null : define('LIB_PATH', SITE_ROOT.DS.'includes');
