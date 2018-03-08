@@ -1,5 +1,13 @@
 {
     "require": {
         "phpmailer/phpmailer": "^6.0"
-    }
+    },
+
+    "paas": {
+      "document-root": "/public",
+      "index-document": "index.php",
+      "engines": {
+        "nginx": "default",
+        "php": "default"
+      },
 }
