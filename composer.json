@@ -9,5 +9,5 @@
       "engines": {
         "nginx": "default",
         "php": "default"
-      },
+      }
 }
