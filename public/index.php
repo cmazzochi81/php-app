@@ -6,12 +6,31 @@ include_layout_template('header.php');
 $message = "";
 ?>
 <div id="mainContent" class="clearfix">
-     <a href="#navicon" id="c-button--slide-left" style="display:none; margin-left:40%; margin-bottom:40px;" class="c-button box-shadow-navicon">
+     <!-- <a href="#navicon" id="c-button--slide-left" style="display:none; margin-left:40%; margin-bottom:40px;" class="c-button box-shadow-navicon">
         Menu
-        </a> 
+        </a>  -->
     <!-- <a href="#navicon" class="box-shadow-navicon" style="border:2px solid red;"></a> -->
 
-    <div id="linksDiv"class="clearfix">
+    <a href="#" class="slideout-menu-toggle">
+        <div class="navicon"></div>
+        <div class="navicon"></div>
+        <div class="navicon"></div>
+    </a>
+    
+    <div class="slideout-menu" style="margin-bottom:20px;">
+
+        <ul>
+            <li><a href="index.php">Home <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="gallery.php">Gallery <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="video.php">Video<i class="fa fa-angle-right"></i></a></li>
+            <li><a href="contact.php">Contact<i class="fa fa-angle-right"></i></a></li>
+             <li><a href="http://www.mazzoart.com">Java Version<i class="fa fa-angle-right"></i></a></li>
+              <li><a href="http://www.chrismazzochi.com/development">AngularJS2 Version<i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#" class="fa fa-angle-right slideout-menu-close">Close Me<i></i></a></li>
+        </ul>
+    </div>
+
+    <div id="linksDiv" class="clearfix">
         <ul class="clearfix">
             <li class="links linkHome"><a href="index.php">Home</a></li>
             <li class="links linkPaint"><a href="gallery.php">Gallery</a></li>
