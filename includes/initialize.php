@@ -2,10 +2,10 @@
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
 //Development
-defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'wamp64'.DS.'www'.DS.'mazzo_php_app_dev');
+//defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'wamp64'.DS.'www'.DS.'mazzo_php_app_dev');
 
 //Production AWS
-//defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'var'.DS.'www'.DS.'html');
+defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'var'.DS.'www'.DS.'html');
 
 //Production Scalio
 //defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'app');
