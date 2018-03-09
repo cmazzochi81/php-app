@@ -11,19 +11,19 @@ $message = "";
         </a> 
     <!-- <a href="#navicon" class="box-shadow-navicon" style="border:2px solid red;"></a> -->
 
-    <div class="clearfix">
+    <div id="linksDiv"class="clearfix">
         <ul class="clearfix">
-            <li class="linkHome"><a href="index.php">Home</a></li>
-            <li class="linkPaint"><a href="gallery.php">Gallery</a></li>
-            <li class="linkVideo"><a href="video.php">Video</a></li>
-            <li class="linkContact"><a href="contact.php">Contact</a></li>
+            <li class="links linkHome"><a href="index.php">Home</a></li>
+            <li class="links linkPaint"><a href="gallery.php">Gallery</a></li>
+            <!-- <li class="linkVideo"><a href="video.php">Video</a></li> -->
+            <li class="links linkContact"><a href="contact.php">Contact</a></li>
             <?php
             if (!$session->is_logged_in()) {
 //                        echo("Not logged in.");
-                echo("<li style=\"background-color:#5b32a8;\"><a href=\"admin/login.php\">Login</a></li>");
+                echo("<li class = \"links loginLogout\" style=\"background-color:#5b32a8;display:inline;padding:20px;\"><a href=\"admin/login.php\">Login</a></li>");
             } else {
 //                            echo("Logged in.");
-                echo("<li style=\"background-color:#5b32a8;\"><a href=\"admin/logout.php\">Logout</a></li>");
+                echo("<li class=\"links loginLogout\" style=\"background-color:#5b32a8;display:inline;padding:20px;\"><a href=\"admin/logout.php\">Logout</a></li>");
             }
             ?>
         </ul>
@@ -54,7 +54,7 @@ $message = "";
                     <noscript><a href="http://feed.informer.com/widgets/NKMJYXDSOV.html">"Wired Magazine 1"</a>
                     </noscript>
                 </div>
-            </div><!--End latest news  div
+            </div><!--End latest news  div-->
             
              <div id="photoShow" class="col-xs-12 col-sm-12 col-md-4 col-lg-4" >
                 <ul class="rslides">

@@ -516,7 +516,7 @@ body {background-color:#fff;}
 /*Header***************************************************************/
 header {
     width: 100%;
-    background: url(../images/basquiat.jpg);
+    background: url(../images/basquiat2.gif);
     background-position: center center;
     background-size: cover;
     height: 200px;
@@ -528,7 +528,7 @@ header h1{
     margin-top: 20px;
     margin-left: 2.5%; 
     position: absolute;
-    color: #000;
+    color: #fff;
 }
 
 header h3{
@@ -542,8 +542,8 @@ header h3{
 
 .date{
     font-size: 17pt;
-    color: #000;
-    margin-top:5% !important;
+    color: #fff;
+    margin-top:7% !important;
     margin-left:8%;
 }
 
@@ -553,7 +553,6 @@ header h3{
     color:#fff;
     background-color: #000;
     width:100%;
-    padding-top:30px;
     padding-bottom: 5%;
     min-height: 400px;
     position:relative;
@@ -630,8 +629,19 @@ nav a:active {
     color: green;
 }
 
+.links{
+  display:inline;
+  padding: 20px;
+}
+
+#linksDiv{
+  margin-top:20px;
+  margin-left:.5%;
+}
+
 .linkHome{
     background-color:#f6de36;
+    
 }
 
 .linkPaint{
@@ -647,6 +657,10 @@ nav a:active {
 
 .linkContact{
     background-color:#fff;
+}
+
+.loginLogout{
+  background-color:#5b32a8;
 }
 
 .active{
@@ -1865,7 +1879,7 @@ footer p {
     .date{
         margin-top:7%;
         margin-left:5% !important;
-        color:#000;
+        color:#fff;
         margin-left:21%;
     }
     

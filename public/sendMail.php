@@ -6,7 +6,7 @@ if (isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "cmazzochi81@gmail.com";
-    $email_subject = "Comments Notification";
+    $email_subject = "Contact Form";
 
     function died($error) {
         // your error code can go here

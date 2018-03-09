@@ -1,12 +1,15 @@
 <?php
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
-// defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'wamp64'.DS.'www'.DS.'mazzo_php_app_dev');
+//Development
+defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'wamp64'.DS.'www'.DS.'mazzo_php_app_dev');
 
-// defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'var'.DS.'www'.DS.'html');
-defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'app');
-//defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'Users'.DS.'chrismazzochi'.DS.'Sites'.DS.'mazzo_php_app_dev');
-//defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'home'.DS.'cmazzo81'.DS.'public_html');
+//Production AWS
+//defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'var'.DS.'www'.DS.'html');
+
+//Production Scalio
+//defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'app');
+
 defined('LIB_PATH')? null : define('LIB_PATH', SITE_ROOT.DS.'includes');
 
 //load config file first

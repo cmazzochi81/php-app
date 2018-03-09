@@ -29,21 +29,8 @@ $message = "";
     // maintain the current page (or store $page in $session)
 ?>
 <div id="mainContent" style="display:inline-block;" class="clearfix">
-   <nav class="clearfix">
-        <ul class="clearfix">
-            <li class="linkHome"><a href="index.php">Home</a></li>
-            <li class="linkPaint"><a href="gallery.php">Gallery</a></li>
-            <li class="linkVideo"><a href="video.php">Video</a></li>
-            <li class="linkContact"><a href="contact.php">Contact</a></li>
-            <?php 
-                if(!$session->is_logged_in()){
-                    echo("<li style=\"background-color:#5b32a8;\"><a href=\"admin/login.php\">Login</a></li>"); 
-                }else{
-                    echo("<li style=\"background-color:#5b32a8;\"><a href=\"admin/logout.php\">Logout</a></li>");
-                        }
-            ?>
-        </ul>
-    </nav>
+<a href="index.php">&laquo; Back</a><br />
+   
 <h1>Gallery</h1>
 <div id ="paintingsDiv">
     <?php foreach ($photos as $photo): ?>

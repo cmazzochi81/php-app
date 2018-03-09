@@ -29,7 +29,7 @@ $layout_context = "public";
         <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="scripts/jquery-ui-1.10.3.custom.js"></script>
         <script type="text/javascript" src="scripts/mazzo-javaScript.js"></script>
-        <script type="text/javascript" src="scripts/responsive_slides.js"></script>
+       <script type="text/javascript" src="scripts/responsive_slides.js"></script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
@@ -39,12 +39,14 @@ $layout_context = "public";
 
             <header class="clearfix">
               
-                <h1>Mazzochi Techno Logi</h1>
+                <h1>Chris Mazzochi Web Designs</h1>
                 <h3 class="date"><?php echo date("l F dS"); ?><br />
                     <?php
                     if ($layout_context == "admin") {
                         echo "Logged in as Administrator";
                     }
                     ?>
-                </h3>        
+                </h3>  
+
+                      
 </header><!--End Header div--> 
