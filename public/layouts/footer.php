@@ -1,49 +1,55 @@
 <footer>
-    <p><small>Copyright <?php echo date("Y", time()); ?> | Mazzochi Techno Logi | www.chrismazzochi.com | <a href='contact.php'>contact</a></small></p>
-
-<!--Copyright<?php //echo date("Y"), time());?>-->
-        
-  </footer><!--End footer div-->
+    <p><small>Copyright <?php echo date("Y", time()); ?> | Chris Mazzochi Web Designs </small></p>
+</footer>
   
 </div><!--End Wrapper div-->
+<script type="text/javascript">
+$(document).ready(function () {
+    $('.slideout-menu-toggle').on('click', function (event) {
+        event.preventDefault();
+        // create menu variables
+        var slideoutMenu = $('.slideout-menu');
+        var slideoutMenuWidth = $('.slideout-menu').width();
 
-<nav id="c-menu--slide-left" class="c-menu c-menu--slide-left clearfix" style="border: 3px solid yellow;">
-   
-  <button class="c-menu__close">&larr; Close Menu</button>
-  <ul class="c-menu__items clearfix">
-    <li class="c-menu__item" style="border: 2px solid greenyellow; width:100%;"><a href="#" class="c-menu__link" style="color:#fff;">Home</a></li>
-    <li class="c-menu__item" style="border: 2px solid greenyellow; width:100%;"><a href="#" class="c-menu__link" style="color:#fff;">About</a></li>
-    <li class="c-menu__item" style="border: 2px solid greenyellow; width:100%;"><a href="#" class="c-menu__link" style="color:#fff;">Services</a></li>
-    <li class="c-menu__item" style="border: 2px solid greenyellow; width:100%;"><a href="#" class="c-menu__link" style="color:#fff;">Work</a></li>
-    <li class="c-menu__item" style="border: 2px solid greenyellow; width:100%;"><a href="#" class="c-menu__link" style="color:#fff;">Contact</a></li>
-  </ul>
-</nav><!-- /c-menu slide-left -->
+        // toggle open class
+        slideoutMenu.toggleClass("open");
+
+        // slide menu
+        if (slideoutMenu.hasClass("open")) {
+            slideoutMenu.animate({
+                left: "0px"
+            });
+        } else {
+            slideoutMenu.animate({
+                left: -slideoutMenuWidth
+            }, 250);
+        }
+    });
 
 
+    $('.slideout-menu-close').on('click', function (event) {
+        event.preventDefault();
+        // create menu variables
+        var slideoutMenu = $('.slideout-menu');
+        var slideoutMenuWidth = $('.slideout-menu').width();
 
-<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+        // toggle open class
+        if (slideoutMenu.hasClass("open")) {
 
-<!-- menus script -->
-<script src="../scripts/navicon.js"></script>
-<script>
-  
-  /**
-   * Slide left instantiation and action.
-   */
-  var slideLeft = new Menu({
-    wrapper: '#wrapper',
-    type: 'slide-left',
-    menuOpenerClass: '.c-button',
-    maskId: '#c-mask'
-  });
+            slideoutMenu.animate({
+                left: -slideoutMenuWidth
+            }, 250);
 
-  var slideLeftBtn = document.querySelector('#c-button--slide-left');
-  
-  slideLeftBtn.addEventListener('click', function(e) {
-    e.preventDefault;
-    slideLeft.open();
-  });
+        } else {
+            slideoutMenu.animate({
+                left: "0px"
+            });
+        }
+        // toogle class after condition check
+        slideoutMenu.toggleClass("open");
+    });
 
+});
 </script>
 
 </body>

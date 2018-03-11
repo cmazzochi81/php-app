@@ -6,26 +6,27 @@ include_layout_template('header.php');
 $message = "";
 ?>
 <div id="mainContent" class="clearfix">
-     <!-- <a href="#navicon" id="c-button--slide-left" style="display:none; margin-left:40%; margin-bottom:40px;" class="c-button box-shadow-navicon">
-        Menu
-        </a>  -->
-    <!-- <a href="#navicon" class="box-shadow-navicon" style="border:2px solid red;"></a> -->
 
-    <a href="#" class="slideout-menu-toggle">
+    <a href="#" class="slideout-menu-toggle" onclick="slideMenu();">
         <div class="navicon"></div>
         <div class="navicon"></div>
         <div class="navicon"></div>
     </a>
     
     <div class="slideout-menu" style="margin-bottom:20px;">
-
-        <ul>
-            <li><a href="index.php">Home <i class="fa fa-angle-right"></i></a></li>
-            <li><a href="gallery.php">Gallery <i class="fa fa-angle-right"></i></a></li>
-            <li><a href="video.php">Video<i class="fa fa-angle-right"></i></a></li>
-            <li><a href="contact.php">Contact<i class="fa fa-angle-right"></i></a></li>
-             <li><a href="http://www.mazzoart.com">Java Version<i class="fa fa-angle-right"></i></a></li>
-              <li><a href="http://www.chrismazzochi.com/development">AngularJS2 Version<i class="fa fa-angle-right"></i></a></li>
+        <ul style="padding-left:0px;">
+            <li style="background-color:#f6de36;"><a href="index.php">Home <i class="fa fa-angle-right"></i></a></li>
+            <li style="background-color:#ddf135;"><a href="gallery.php">Gallery <i class="fa fa-angle-right"></i></a></li>
+            <li style="background-color:#5b32a8;"><a href="https://mazzo-java-app.scalingo.io/">Java Auction App<i class="fa fa-angle-right"></i></a></li>
+            <li style="background-color:#8d27a2;"><a href="https://mazzo-angular-app.herokuapp.com/">Angular Blog App<i class="fa fa-angle-right"></i></a></li>
+            <li><a href="https://corridormdtest.azurewebsites.net/">.NET Client App<i class="fa fa-angle-right"></i></a></li>
+            <?php
+            if (!$session->is_logged_in()) {
+                echo("<li class=\"fa fa-angle-right\"><a href=\"admin/login.php\">Login</a></li>");
+            } else {
+                echo("<li class=\"fa fa-angle-right\"><a href=\"admin/logout.php\">Logout</a></li>");
+            }
+            ?>
             <li><a href="#" class="fa fa-angle-right slideout-menu-close">Close Me<i></i></a></li>
         </ul>
     </div>
@@ -34,17 +35,17 @@ $message = "";
         <ul class="clearfix">
             <li class="links linkHome"><a href="index.php">Home</a></li>
             <li class="links linkPaint"><a href="gallery.php">Gallery</a></li>
-            <!-- <li class="linkVideo"><a href="video.php">Video</a></li> -->
-            <li class="links linkContact"><a href="contact.php">Contact</a></li>
+            <li class="links linkPaint"><a href="https://mazzo-java-app.scalingo.io/">Java Auction App</a></li>
+            <li class="links linkPaint"><a href="https://mazzo-angular-app.herokuapp.com/">Angular Blog App</a></li>
+            <li class="links linkPaint"><a href="https://corridormdtest.azurewebsites.net/">.NET Client App</a></li>
             <?php
             if (!$session->is_logged_in()) {
-//                        echo("Not logged in.");
                 echo("<li class = \"links loginLogout\" style=\"background-color:#5b32a8;display:inline;padding:20px;\"><a href=\"admin/login.php\">Login</a></li>");
             } else {
-//                            echo("Logged in.");
                 echo("<li class=\"links loginLogout\" style=\"background-color:#5b32a8;display:inline;padding:20px;\"><a href=\"admin/logout.php\">Logout</a></li>");
             }
             ?>
+            
         </ul>
     </div>
     <div class ="container">

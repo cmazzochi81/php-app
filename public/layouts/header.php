@@ -30,7 +30,7 @@ $layout_context = "public";
         <script type="text/javascript" src="scripts/jquery-ui-1.10.3.custom.js"></script>
         <script type="text/javascript" src="scripts/mazzo-javaScript.js"></script>
        <script type="text/javascript" src="scripts/responsive_slides.js"></script>
-
+        <script type="text/javascript" src="scripts/navicon.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
 
