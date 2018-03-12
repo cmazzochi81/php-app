@@ -74,7 +74,7 @@ $message="";
   <?php echo output_message($message); ?>
   <form action="photo.php?id=<?php echo $photo->id; ?>" method="post">
     <table>
-      <tr>
+      <tr style="margin-bottom:5px;">
         <td>Your name:</td>
         <td style="color:#000;"><input type="text" name="author" value="<?php echo $author; ?>" /></td>
       </tr>

@@ -19,7 +19,7 @@ $message = "";
             <li style="background-color:#ddf135;"><a href="gallery.php">Gallery <i class="fa fa-angle-right"></i></a></li>
             <li style="background-color:#5b32a8;"><a href="https://mazzo-java-app.scalingo.io/">Java Auction App<i class="fa fa-angle-right"></i></a></li>
             <li style="background-color:#8d27a2;"><a href="https://mazzo-angular-app.herokuapp.com/">Angular Blog App<i class="fa fa-angle-right"></i></a></li>
-            <li><a href="https://corridormdtest.azurewebsites.net/">.NET Client App<i class="fa fa-angle-right"></i></a></li>
+            <li><a href="https://corridormdtest.azurewebsites.net/">.NET ClientApp<i class="fa fa-angle-right"></i></a></li>
             <?php
             if (!$session->is_logged_in()) {
                 echo("<li class=\"fa fa-angle-right\"><a href=\"admin/login.php\">Login</a></li>");
@@ -35,9 +35,9 @@ $message = "";
         <ul class="clearfix">
             <li class="links linkHome"><a href="index.php">Home</a></li>
             <li class="links linkPaint"><a href="gallery.php">Gallery</a></li>
-            <li class="links linkPaint"><a href="https://mazzo-java-app.scalingo.io/">Java Auction App</a></li>
-            <li class="links linkPaint"><a href="https://mazzo-angular-app.herokuapp.com/">Angular Blog App</a></li>
-            <li class="links linkPaint"><a href="https://corridormdtest.azurewebsites.net/">.NET Client App</a></li>
+            <li class="links linkPaint"><a href="https://mazzo-java-app.scalingo.io/">Java App</a></li>
+            <li class="links linkPaint"><a href="https://mazzo-angular-app.herokuapp.com/">Angular App</a></li>
+            <li class="links linkPaint"><a href="https://corridormdtest.azurewebsites.net/">.NET App</a></li>
             <?php
             if (!$session->is_logged_in()) {
                 echo("<li class = \"links loginLogout\" style=\"background-color:#5b32a8;display:inline;padding:20px;\"><a href=\"admin/login.php\">Login</a></li>");
@@ -150,7 +150,7 @@ $message = "";
                 
                 <div  id="vidPaintingDiv" class = "col-xs-12 col-sm-12 col-md-12 col-lg-8">
                     
-                    <video id="my_video" class = "col-xs-6 col-sm-6 col-md-6 col-lg-6" controls>
+                    <video id="my_video" class = "col-xs-6 col-sm-6 col-md-6 col-lg-6" autoplay loop muted>
 
                         <source src="video/electro_fun.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 
