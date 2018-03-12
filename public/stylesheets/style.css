@@ -119,8 +119,8 @@ header h3{
   font-family: Le-Havre, "Times New Roman", Times, serif;
   color: white;
   margin-top: 65px;
-  margin-left: 2.5%; 
   margin-bottom: 0px;
+  margin-left: 2.5%; 
   position: absolute;
 }
 
@@ -134,20 +134,20 @@ header h3{
 /*Main Content******************************************************/
 
 #mainContent {
-color:#fff;
-background-color: #000;
-width:100%;
-padding-bottom: 5%;
-min-height: 400px;
-position:relative;
+  color:#fff;
+  background-color: #000;
+  width:100%;
+  padding-bottom: 5%;
+  min-height: 400px;
+  position:relative;
 }
 
 #mainContent > h1 {
   color: #fff;
   font: 54pt Le-Havre, "Arial", Times, serif;
-  margin-left:44%;
-  width:12%;
   margin-top:20px;
+  margin-left:44%;
+  width:12%; 
 }
 
 #mainContent h3 {font: 1em Le-Havre, "Times New Roman", Times, serif;}
@@ -158,6 +158,7 @@ position:relative;
 .linkHome{background-color:#f6de36;}
 .linkPaint{background-color:#ddf135;}
 .loginLogout{background-color:#5b32a8;}
+
 /****Admin*********************************************************************/
 #loginFormContainer {
   width: 300px;
@@ -176,18 +177,16 @@ position:relative;
 
 .field label{
   width:25%;
+  margin-left:0px;
   margin-right:4%;
   float:left;
-  margin-left:0px;
   font-family: Raleway;
   font-size: 12pt;
   padding:10px;
   text-align: right;
 }
 
-.field input{
-  margin-top:13px;
-}
+.field input{margin-top:13px;}
 
 #loginForm .error{
   font-family: Arial;
@@ -203,8 +202,8 @@ position:relative;
   padding:10px;
   width:138px;
   font-size:16pt;
-  margin-left:2%;
   margin-top:5px;
+  margin-left:2%;
   color:#999;
 }
 
@@ -218,18 +217,14 @@ position:relative;
 
 .loginLogoutLink{background-color:#5b32a8;}
 
-/***Nav***/
 #navigation{
   width: 28%; 
   float: left;
   position: relative;
-  padding-right: 1.78571%; 
-  padding-left: 1.78571%; 
-  padding-top: 1.78571%;
-  padding-bottom: 1.78571%;
-  margin-left: 2%; 
+  padding:1.78571%;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 2%; 
   color: #FFF;
   background-color: #F96;
   font-family: Arial, sans-serif;
@@ -382,7 +377,6 @@ position:relative;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
-  /*    left: 95px;*/
   top: 110px;
   color:pink;
 }
@@ -547,7 +541,6 @@ footer p {
 /* Hides from IE-mac \*/
 * html .clearfix{height: 1%;}
 .clearfix{display: block;}
-/* End hide from IE-mac */ 
 
 /****Browser Specific Styles***************************************************/
 
@@ -562,34 +555,32 @@ footer p {
     }
 }
 /****Firefox****/
-@-moz-document url-prefix(){
-    .date{margin-top:8%;}
-}
+@-moz-document url-prefix(){.date{margin-top:8%;}}
 /****IE****/
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .date{margin-top:8% !important;}    
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 374px){
   .container{
-      padding-left:0px !important;
-      padding-right:0px !important;
+    padding-left:0px !important;
+    padding-right:0px !important;
   }
 
   #my_video{
-      display:block !important;
-      width:100% !important;
+    display:block !important;
+    width:100% !important;
   }
   .date{
-      margin-top:20% !important;
-      color:#fff;
-      margin-left:21%;
+    margin-top:20% !important;
+    color:#fff;
+    margin-left:21%;
   }
   .rslides img {
-      display: block;
-      height: 190px;
-      float: left;
-      width: 97% !important;
-      border: 0;
+    display: block;
+    height: 190px;
+    float: left;
+    width: 97% !important;
+    border: 0;
   }
   .navicon{
     width: 35px;
@@ -598,7 +589,7 @@ footer p {
     margin: 6px 20px;
   }
   #linksDiv{
-    display:none
+    display:none;
   }
   #mainContent  h1{margin-left:23%;}
 
@@ -696,7 +687,6 @@ footer p {
 
   #painting{
     width:48% !important; 
-    margin-left:0px !important;
     border:none;
     margin-left:10px !important;
   }
@@ -711,9 +701,9 @@ footer p {
   #mainContent > h1 {
     color: #fff;
     font: 54pt Le-Havre, "Arial", Times, serif;
+    margin-top:20px;
     margin-left:38%;
     width:12%;
-    margin-top:20px;
   }
 
   #twitterTimeline{display:none;}
@@ -744,28 +734,27 @@ footer p {
   #linksDiv{margin-top:20px;}
   
   #mainContent > h1 {
-      color: #fff;
-      font: 54pt Le-Havre, "Arial", Times, serif;
-      margin-left:41%;
-      width:12%;
-      margin-top:20px;
+    color: #fff;
+    font: 54pt Le-Havre, "Arial", Times, serif;
+    margin-top:20px;
+    margin-left:41%;
+    width:12%; 
   }
   .date{
-      margin-top:7%;
-      margin-left:5% !important;
-      color:#fff;
-      margin-left:21%;
+    margin-top:7%;
+    margin-left:21%;
+    color:#fff;
   }
   
   #my_video{
-      height:300px;
-      width:50% !important;
-      margin-left:1.5% !important;
+    height:300px;
+    width:50% !important;
+    margin-left:1.5% !important;
   }
 
   #photoShow{height:300px !important;}
   #latest_news{
-      height:300px;
+    height:300px;
   }
   #painting{
     height:300px;
@@ -791,9 +780,9 @@ footer p {
   #mainContent > h1 {
     color: #fff;
     font: 54pt Le-Havre, "Arial", Times, serif;
-    margin-left:43%;
-    width:12%;
     margin-top:20px;
+    margin-left:43%;
+    width:12%; 
   }
   #painting{width:46.8% !important;}
 

@@ -9,7 +9,7 @@ if (!isset($layout_context)) {//default value for $layout_context.
        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <title>Mazzochi Techno Logi <?php if ($layout_context == "admin") {echo "Admin";}?></title>
-        <link href="../stylesheets/mazzo_styles.css" rel="stylesheet" type="text/css" />
+        <link href="../stylesheets/style.css" rel="stylesheet" type="text/css" />
         <link href="../stylesheets/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css"/>
         <script src="https://use.typekit.net/nwn4kiw.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
