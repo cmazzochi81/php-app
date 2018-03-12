@@ -160,7 +160,10 @@ header h3{
   text-align:center;
 }
 .linkHome{background-color:#f6de36;}
-.linkPaint{background-color:#ddf135;}
+.linkGallery{background-color:#ddf135;}
+.linkJava{background-color:#67E667;}
+.linkAngular{background-color:#33CCCC;}
+.linkNet{background-color:#4671D5;}
 .loginLogout{background-color:#5b32a8;}
 
 #comments{
@@ -660,6 +663,10 @@ footer p {
   }
 
   header h1{font-size:23pt;}
+
+  footer p{
+    margin-left:9% !important;
+  }
 }
 /****Media Queries ************************************************************/
 @media only screen and (device-width: 768px) {

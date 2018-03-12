@@ -15,16 +15,16 @@ $message = "";
     
     <div class="slideout-menu" style="margin-bottom:20px;">
         <ul style="padding-left:0px;">
-            <li style="background-color:#f6de36;"><a href="index.php">Home <i class="fa fa-angle-right"></i></a></li>
-            <li style="background-color:#ddf135;"><a href="gallery.php">Gallery <i class="fa fa-angle-right"></i></a></li>
-            <li style="background-color:#5b32a8;"><a href="https://mazzo-java-app.scalingo.io/">Java Auction App<i class="fa fa-angle-right"></i></a></li>
-            <li style="background-color:#8d27a2;"><a href="https://mazzo-angular-app.herokuapp.com/">Angular Blog App<i class="fa fa-angle-right"></i></a></li>
-            <li><a href="https://corridormdtest.azurewebsites.net/">.NET ClientApp<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkHome"><a href="index.php">Home <i class="fa fa-angle-right"></i></a></li>
+            <li class="linkGallery"><a href="gallery.php">Gallery <i class="fa fa-angle-right"></i></a></li>
+            <li class="linkJava"><a href="https://mazzo-java-app.scalingo.io/">Java Auction App<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/">Angular Blog App<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkNet"><a href="https://corridormdtest.azurewebsites.net/">.NET ClientApp<i class="fa fa-angle-right"></i></a></li>
             <?php
             if (!$session->is_logged_in()) {
-                echo("<li class=\"fa fa-angle-right\"><a href=\"admin/login.php\">Login</a></li>");
+                echo("<li class=\"loginLogout fa fa-angle-right\"><a href=\"admin/login.php\">Login</a></li>");
             } else {
-                echo("<li class=\"fa fa-angle-right\"><a href=\"admin/logout.php\">Logout</a></li>");
+                echo("<li class=\"loginLogout fa fa-angle-right\"><a href=\"admin/logout.php\">Logout</a></li>");
             }
             ?>
             <li><a href="#" class="fa fa-angle-right slideout-menu-close">Close Me<i></i></a></li>
@@ -34,10 +34,10 @@ $message = "";
     <div id="linksDiv" class="clearfix">
         <ul class="clearfix">
             <li class="links linkHome"><a href="index.php">Home</a></li>
-            <li class="links linkPaint"><a href="gallery.php">Gallery</a></li>
-            <li class="links linkPaint"><a href="https://mazzo-java-app.scalingo.io/">Java App</a></li>
-            <li class="links linkPaint"><a href="https://mazzo-angular-app.herokuapp.com/">Angular App</a></li>
-            <li class="links linkPaint"><a href="https://corridormdtest.azurewebsites.net/">.NET App</a></li>
+            <li class="links linkGallery"><a href="gallery.php">Gallery</a></li>
+            <li class="links linkJava"><a href="https://mazzo-java-app.scalingo.io/">Java App</a></li>
+            <li class="links linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/">Angular App</a></li>
+            <li class="links linkNet"><a href="https://corridormdtest.azurewebsites.net/">.NET App</a></li>
             <?php
             if (!$session->is_logged_in()) {
                 echo("<li class = \"links loginLogout\"><a href=\"admin/login.php\">Login</a></li>");
@@ -48,7 +48,7 @@ $message = "";
             
         </ul>
     </div>
-    <div class ="container">
+    <div class ="container" style="margin-top:0px;">
 
         <div class ="row">
             
