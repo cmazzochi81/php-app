@@ -40,9 +40,9 @@ $message = "";
             <li class="links linkPaint"><a href="https://corridormdtest.azurewebsites.net/">.NET App</a></li>
             <?php
             if (!$session->is_logged_in()) {
-                echo("<li class = \"links loginLogout\" style=\"background-color:#5b32a8;display:inline;padding:20px;\"><a href=\"admin/login.php\">Login</a></li>");
+                echo("<li class = \"links loginLogout\"><a href=\"admin/login.php\">Login</a></li>");
             } else {
-                echo("<li class=\"links loginLogout\" style=\"background-color:#5b32a8;display:inline;padding:20px;\"><a href=\"admin/logout.php\">Logout</a></li>");
+                echo("<li class=\"links loginLogout\"><a href=\"admin/logout.php\">Logout</a></li>");
             }
             ?>
             

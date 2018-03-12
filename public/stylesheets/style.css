@@ -151,13 +151,25 @@ header h3{
 }
 
 #mainContent h3 {font: 1em Le-Havre, "Times New Roman", Times, serif;}
+
 .links{
-  display:inline;
+  display:inline-block;
   padding: 20px;
+  width:11%;
+  border: 2px solid #fff;
+  text-align:center;
 }
 .linkHome{background-color:#f6de36;}
 .linkPaint{background-color:#ddf135;}
 .loginLogout{background-color:#5b32a8;}
+
+#comments{
+  margin-left:1%;
+}
+
+#comment-form{
+  padding:20px;
+}
 
 /****Admin*********************************************************************/
 #loginFormContainer {
@@ -178,7 +190,7 @@ header h3{
 .field label{
   width:25%;
   margin-left:0px;
-  margin-right:4%;
+  margin-right:9%;
   float:left;
   font-family: Raleway;
   font-size: 12pt;
@@ -731,7 +743,18 @@ footer p {
 /************************************************************************************/
 @media only screen and (min-width: 1200px){
     
-  #linksDiv{margin-top:20px;}
+  #linksDiv{
+    margin-top:20px;
+    width:90%;
+  }
+
+  .links{
+    border: 2px solid #fff;
+    width:11%;
+    text-align:center;
+    display:inline-block;
+  }
+
   
   #mainContent > h1 {
     color: #fff;
@@ -742,7 +765,6 @@ footer p {
   }
   .date{
     margin-top:7%;
-    margin-left:21%;
     color:#fff;
   }
   

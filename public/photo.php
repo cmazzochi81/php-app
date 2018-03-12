@@ -73,14 +73,14 @@ $message="";
   <h3 style="color:#fff;">New Comment</h3>
   <?php echo output_message($message); ?>
   <form action="photo.php?id=<?php echo $photo->id; ?>" method="post">
-    <table>
-      <tr style="margin-bottom:5px;">
-        <td>Your name:</td>
-        <td style="color:#000;"><input type="text" name="author" value="<?php echo $author; ?>" /></td>
+    <table style="border-spacing:0 20px; border-collapse:separate;">
+      <tr>
+        <td style="text-align:right;">Your name:</td>
+        <td style="color:#000;padding-left:1%;"><input type="text" name="author" value="<?php echo $author; ?>" /></td>
       </tr>
       <tr>
-        <td>Your comment:</td>
-        <td style="color:#000;"><textarea name="body" cols="40" rows="8"><?php echo $body; ?></textarea></td>
+        <td style="text-align:right;">Your comment:</td>
+        <td style="color:#000;padding-left:1%;"><textarea name="body" cols="40" rows="8"><?php echo $body; ?></textarea></td>
       </tr>
       <tr>
         <td>&nbsp;</td>

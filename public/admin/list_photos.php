@@ -7,7 +7,8 @@
 ?>
 <?php include_layout_template('admin_header.php'); ?>
 <?php echo output_message($message); ?>
-<h2>Photographs</h2>
+<a style="margin-left:20px;" href="index.php">&laquo; Back</a><br />
+<h2 style="margin-left:25%;">Photographs</h2>
 
 <table id="listPhotosTable">
     <tr>
@@ -40,4 +41,4 @@
 <br />
 <a id="uploadText" href="photo_upload.php">Upload a new photograph</a>
 
-<?php include_layout_template('admin_footer.php'); ?>
+<?php include_layout_template('footer.php'); ?>

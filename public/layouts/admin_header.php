@@ -15,10 +15,10 @@ if (!isset($layout_context)) {//default value for $layout_context.
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <link rel="shortcut icon" href="../images/favicon.ico"/>
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
-        <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
-        <script type="text/javascript" src="scripts/jquery-ui-1.10.3.custom.js"></script>
-        <script type="text/javascript" src="scripts/mazzo_scripts.js"></script>
-        <script type="text/javascript" src="scripts/responsive_slides.js"></script>
+        <script type="text/javascript" src="../scripts/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="../scripts/jquery-ui-1.10.3.custom.js"></script>
+        <script type="text/javascript" src="../scripts/mazzo-javaScript.js"></script>
+        <script type="text/javascript" src="../scripts/responsive_slides.js"></script>
     </head>
 
     <body>

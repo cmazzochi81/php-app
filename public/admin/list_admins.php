@@ -10,14 +10,11 @@
 <?php $layout_context = "admin"; ?>
 <?php include("../layouts/admin_header.php"); ?>
 <div id="main">
-  <div id="navigation">
-		<br />
-		<a href="index.php">&laquo; Main menu</a><br />
-  </div>
-  <div id="page">
+  <a style="margin-left:20px;" href="index.php">&laquo; Back</a><br />
+  <div id="page" style="margin-left:30%;margin-bottom:2%;">
     <?php echo output_message($message); ?>
     <h2>Manage Admins</h2>
-    <table style="border: 1px solid #000; color:#000;">
+    <table style="border: 1px solid transparent; color:#000;">
       <tr>
         <th style="text-align: left; width: 200px;">Username</th>
         <th style="text-align: left; width: 200px;">User Id</th>
