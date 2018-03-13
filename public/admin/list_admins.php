@@ -10,7 +10,7 @@
 <?php $layout_context = "admin"; ?>
 <?php include("../layouts/admin_header.php"); ?>
 <div id="main">
-  <a style="margin-left:20px;" href="index.php">&laquo; Back</a><br />
+  <a id="backButton" style="margin-left:20px;" href="index.php">&laquo; Back</a><br />
   <div id="page" style="margin-left:30%;margin-bottom:2%;">
     <?php echo output_message($message); ?>
     <h2>Manage Admins</h2>

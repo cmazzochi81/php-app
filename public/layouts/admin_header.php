@@ -25,10 +25,10 @@ if (!isset($layout_context)) {//default value for $layout_context.
         <div id="wrapper" class="clearfix">
 
             <header class=""clearfix">
-                <h1>Mazzochi Techno Logi</h1><br />
+                <h1>Chris Mazzochi Web Designs</h1><br />
                 <h3 class="date"><?php echo date("l F dS"); ?><br />
                 <?php if ($layout_context == "admin") {
-                    echo "Logged in as Administrator";
+                    echo "Logged in as Administrator"; 
                 }
                 ?></h3>
             </header><!--End Header div--> 

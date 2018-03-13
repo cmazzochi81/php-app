@@ -137,8 +137,6 @@ header h3{
   color:#fff;
   background-color: #000;
   width:100%;
-  padding-bottom: 5%;
-  min-height: 400px;
   position:relative;
 }
 
@@ -172,6 +170,11 @@ header h3{
 
 #comment-form{
   padding:20px;
+  background-color:#000;
+}
+
+#textInput{
+  width:100%;
 }
 
 /****Admin*********************************************************************/
@@ -212,6 +215,11 @@ header h3{
   display:block;
 }
 
+#loginForm p{
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
 #loginSubmitButton{
   background-color:#fbed8f;
   padding:10px;
@@ -228,6 +236,8 @@ header h3{
   font-size:24pt;
   font-family:Arial;
   font-weight:bold;
+  margin-top:0px;
+  margin-bottom:0px;
 }
 
 .loginLogoutLink{background-color:#5b32a8;}
@@ -262,7 +272,7 @@ header h3{
 
 #uploadText {
   font-family: Raleway;
-  margin-left:45%;
+  margin-left:42%;
   margin-bottom:1%;
 }
 
@@ -305,6 +315,15 @@ header h3{
   float: left;
   width: 100%;
   border: 0;
+}
+
+/********GALLERY PHOTOS********************************************************/
+.galleryPhoto{
+  margin-left: 20px;
+}
+
+.galleryPhoto p{
+  color:#000;
 }
 
 /*******RSS FEED***************************************************************/
@@ -436,8 +455,9 @@ header h3{
 }
 
 p.caption{
-  font: 10pt Raleway;
+  font: 12pt Raleway;
   text-align: center;
+  margin-top:10px;
 }
 
 /*Footer******************************************************/
@@ -581,12 +601,16 @@ footer p {
     padding-right:0px !important;
   }
 
+  #backButton{
+    margin-left:5px !important;
+  }
+
   #my_video{
     display:block !important;
     width:100% !important;
   }
   .date{
-    margin-top:20% !important;
+    margin-top:18% !important;
     color:#fff;
     margin-left:21%;
   }
@@ -606,7 +630,11 @@ footer p {
   #linksDiv{
     display:none;
   }
-  #mainContent  h1{margin-left:23%;}
+  #mainContent  h1{
+    margin-left:25%;
+    margin-top:0px !important;
+    font:45pt Le-Havre, "Arial", Times, serif;
+  }
 
   #photoShow {
     margin-top:5px;
@@ -628,8 +656,12 @@ footer p {
 
   .eachPaintingDiv{
     float: left; 
-    margin-left: 10px; 
+    margin-left: 7.5px !important; 
     height:300px;
+  }
+
+  .galleryPhoto{
+    margin-left:0px !important;
   }
 
   #twitterTimeline{
@@ -652,6 +684,30 @@ footer p {
     width:100% !important;
   }
 
+  #comment-form{
+    padding: 5px !important;
+  }
+
+  #comment-form h3{
+    margin-left:2% !important;
+  }
+
+  /*#comment-form table{
+    margin-left:7% !important;
+  }
+*/
+  textarea{
+    width:98% !important;
+  }
+
+  #textInput{
+    width:98% !important;
+  }
+
+  #submitButton{
+    margin-left:38% !important;
+  }
+
   #vidPaintingDiv{
     padding-left:0px !important;
     padding-right:0px !important;
@@ -662,7 +718,28 @@ footer p {
     padding-right:0px !important;
   }
 
+  #loginFormContainer{
+    margin-top:0px !important;
+    margin-left:0px !important;
+  }
+
+  #navigation{
+    width:90%;
+  }
+
+  #uploadText{
+    margin-left:23% !important;
+  }
+
+  #page{
+    margin-left:0px !important;
+  }
+
   header h1{font-size:23pt;}
+
+  footer{
+    height:100px !important;
+  }
 
   footer p{
     margin-left:9% !important;

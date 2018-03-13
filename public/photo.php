@@ -47,7 +47,7 @@ $message="";
 <a href="gallery.php">&laquo; Back</a><br />
 <br />
 
-<div style="margin-left: 20px;">
+<div class="galleryPhoto">
   <img src="<?php echo $photo->image_path(); ?>" />
   <p><?php echo $photo->caption; ?></p>
 </div>
@@ -69,22 +69,25 @@ $message="";
   <?php if(empty($comments)) { echo "No Comments."; } ?>
 </div>
 
-<div id="comment-form" style="background-color:#000;">
+<div id="comment-form">
   <h3 style="color:#fff;">New Comment</h3>
   <?php echo output_message($message); ?>
   <form action="photo.php?id=<?php echo $photo->id; ?>" method="post">
-    <table style="border-spacing:0 20px; border-collapse:separate;">
+    <table style="border-spacing:0 5px; border-collapse:separate;">
       <tr>
-        <td style="text-align:right;">Your name:</td>
-        <td style="color:#000;padding-left:1%;"><input type="text" name="author" value="<?php echo $author; ?>" /></td>
+        <td style="text-align:left;">Name:</td>
       </tr>
       <tr>
-        <td style="text-align:right;">Your comment:</td>
-        <td style="color:#000;padding-left:1%;"><textarea name="body" cols="40" rows="8"><?php echo $body; ?></textarea></td>
+        <td style="color:#000;"><input id="textInput" type="text" name="author" value="<?php echo $author; ?>" /></td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td><input type="submit" name="submit" value="Submit Comment" style="color:#000;"/></td>
+        <td style="text-align:left;">Comment:</td>
+      </tr>
+      <tr>
+        <td style="color:#000;"><textarea name="body" cols="40" rows="8"><?php echo $body; ?></textarea></td>
+      </tr>
+      <tr>
+        <td><input id="submitButton" type="submit" name="submit" value="Submit" style="color:#000;"/></td>
       </tr>
     </table>
   </form>

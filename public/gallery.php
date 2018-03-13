@@ -29,8 +29,7 @@ $message = "";
     // maintain the current page (or store $page in $session)
 ?>
 <div id="mainContent" style="display:inline-block;" class="clearfix">
-<a style="margin-left:20px;" href="index.php">&laquo; Back</a><br />
-   
+<a style="margin-left:5px;" href="index.php">&laquo; Back</a><br />
 <h1>Gallery</h1>
 <div id ="paintingsDiv">
     <?php foreach ($photos as $photo): ?>
