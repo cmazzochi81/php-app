@@ -33,11 +33,11 @@ $message = "";
 
     <div id="linksDiv" class="clearfix">
         <ul class="clearfix">
-            <li class="links linkHome"><a href="index.php">Home</a></li>
+            <li class="links linkHome"><a class="active" href="index.php">Home</a></li>
             <li class="links linkGallery"><a href="gallery.php">Gallery</a></li>
-            <li class="links linkJava"><a href="https://mazzo-java-app.scalingo.io/">Java App</a></li>
-            <li class="links linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/">Angular App</a></li>
-            <li class="links linkNet"><a href="https://corridormdtest.azurewebsites.net/">.NET App</a></li>
+            <li class="links linkJava"><a href="https://mazzo-java-app.scalingo.io/" target="_blank">Java App</a></li>
+            <li class="links linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/" target="_blank">Angular App</a></li>
+            <li class="links linkNet"><a href="https://corridormdtest.azurewebsites.net/" target="_blank">.NET App</a></li>
             <?php
             if (!$session->is_logged_in()) {
                 echo("<li class = \"links loginLogout\"><a href=\"admin/login.php\">Login</a></li>");

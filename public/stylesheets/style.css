@@ -149,13 +149,16 @@ header h3{
 }
 
 #mainContent h3 {font: 1em Le-Havre, "Times New Roman", Times, serif;}
-
+.active{color:red;}
 .links{
   display:inline-block;
   padding: 20px;
   width:11%;
   border: 2px solid #fff;
   text-align:center;
+}
+.links a{
+  color:#fff;
 }
 .linkHome{background-color:#f6de36;}
 .linkGallery{background-color:#ddf135;}
