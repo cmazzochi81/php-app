@@ -753,7 +753,7 @@ footer p {
 
   header {
     width: 100%;
-    background: url(../images/basquiat.jpg) #000 right repeat;
+    background: url(../images/basquiat2.gif) center cover;
     height: 200px;
   }
 
@@ -763,19 +763,20 @@ footer p {
     margin-top: 0px !important;
     margin-left: 2.5%; 
     position: absolute;
-    color: #000;
+    color: #fff;
   }
 
   .date{
-    margin-top: 7% !important;
-    margin-left:38%;
-    color:#000;
+    margin-top: 10% !important;
+    margin-left:15%;
+    color:#fff;
   }
   
   #photoShow {
     border: none !important;
     margin-bottom:5px;
     width:100% !important;
+    margin-left:0px;
   }
 
   #vidPaintingDiv{
@@ -825,6 +826,17 @@ footer p {
     font-size: 1em;
     margin-top:1%;
     margin-left:16%;
+  }
+
+  .links{
+    width:16%;
+    padding: 15px;
+  }
+
+  #linksDiv ul{
+    padding-left:0px;
+    margin-top:5px;
+    margin-left: 1%;
   }
 }
 /************************************************************************************/
