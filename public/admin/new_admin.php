@@ -1,4 +1,5 @@
 <?php require_once("../../includes/session.php"); ?>
+<?php require_once("../../includes/database.php"); ?>
 <?php require_once("../../includes/database_object.php"); ?>
 <?php require_once("../../includes/functions.php"); ?>
 <?php require_once("../../includes/validation_functions.php"); ?>
@@ -26,7 +27,7 @@ if (isset($_POST['submit'])) {
     $query .= ") VALUES (";
     $query .= "  '{$username}', '{$hashed_password}'";
     $query .= ")";
-    echo $query;
+
     $result = mysqli_query($connection, $query);
 
     if ($result) {
