@@ -1,5 +1,5 @@
 <?php 
-require_once(LIB_PATH . DS . "db_credentials.php");
+require_once(LIB_PATH.DS.'db_credentials.php');
 
 class MySQLDatabase{
     private $connection;
