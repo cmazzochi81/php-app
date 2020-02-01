@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     $query .= "  '{$username}', '{$hashed_password}'";
     $query .= ")";
 
-    $result = mysqli_query($connection, $query);
+    $result = mysqli_query($query, $connection);
 
     if ($result) {
       // Success
