@@ -7,8 +7,8 @@ defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 //Production AWS
 //defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'var'.DS.'www'.DS.'html');
 
-//Production Scalio
-//defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'app');
+//Production Heroku
+defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'mazzo-php-app');
 
 defined('LIB_PATH')? null : define('LIB_PATH', SITE_ROOT.DS.'includes');
 
