@@ -15,13 +15,14 @@ defined('LIB_PATH')? null : define('LIB_PATH', SITE_ROOT.DS.'includes');
 //load config file first
 //require_once(LIB_PATH.DS.'config.php'); 
 
-//Load basic functions next so everthing after can use them. 
+//Load basic functions next so everything after can use them. 
 require_once(LIB_PATH.DS.'functions.php'); 
 require_once(LIB_PATH.DS.'validation_functions.php'); 
 //load core objects
 require_once(LIB_PATH.DS.'session.php');
 require_once(LIB_PATH.DS.'database.php'); 
 require_once(LIB_PATH.DS.'database_object.php'); 
+require_once(LIB_PATH.DS.'db_credentials.php'); 
 require_once(LIB_PATH.DS.'pagination.php'); 
 
 //load database related classes
