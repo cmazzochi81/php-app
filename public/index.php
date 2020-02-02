@@ -1,5 +1,6 @@
 <?php
 require_once("../includes/initialize.php");
+require_once("../includes/database.php");
 var_dump($connection);
 //$photos = Photograph::find_all();
 $layout_context = "public";
