@@ -22,7 +22,7 @@ $username="";
         $found_admin = attempt_login($username, $password);
 
     if ($found_admin) {
-      
+          echo "The found admin is: " . $found_admin;
       // Success
 
             // Mark user as logged in
