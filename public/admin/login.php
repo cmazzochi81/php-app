@@ -43,7 +43,9 @@ $username="";
   
 } // end: if (isset($_POST['submit']))
 ?>
+
 <?php $layout_context = "public"; ?>
+
 <?php require_once('../layouts/admin_header.php'); ?>
 <a href="../index.php">&laquo; Back</a><br />
 <div id="loginFormContainer" class="clearfix">

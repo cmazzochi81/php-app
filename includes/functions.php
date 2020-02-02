@@ -123,8 +123,9 @@ function password_encrypt($password) {
     $admin = find_admin_by_username($username);
     
     if ($admin) {
-      echo "Found admin! : ";
-      var_dump($admin);
+      echo "We found the admin! " . $admin;
+      echo "The admin hashed password is " . $admin["hashed_password"];
+  
       // found admin, now check password
       if (password_check($password, $admin["hashed_password"])) {
         // password matches
