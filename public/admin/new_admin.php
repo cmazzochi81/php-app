@@ -11,6 +11,7 @@ var_dump($database->connection);
 
 if (isset($_POST['submit'])) {
   // Process the form
+  var_dump($_POST);
   
   // validations
   $required_fields = array("username", "password");
