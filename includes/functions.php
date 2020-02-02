@@ -120,8 +120,10 @@ function password_encrypt($password) {
 
   function attempt_login($username, $password) {
     $admin = find_admin_by_username($username);
-    var_dump($admin);
+    
     if ($admin) {
+      echo "Found admin! : ";
+      var_dump($admin);
       // found admin, now check password
       if (password_check($password, $admin["hashed_password"])) {
         // password matches
