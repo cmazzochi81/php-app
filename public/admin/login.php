@@ -5,9 +5,11 @@
 
 <?php
 if($session->is_logged_in()){redirect_to("index.php");}
-if (!($session->is_logged_in())){echo "not logged in";}
+
+if (!($session->is_logged_in())){echo "You are not logged in.  ";}
 
 $username="";
+
   if (isset($_POST['submit'])) {
 
       $required_fields = array("username", "password");
@@ -19,10 +21,11 @@ $username="";
         $password = $_POST["password"];
         
         echo "The username is:  " . $username;
+        echo "The password is:  " . $password;
         $found_admin = attempt_login($username, $password);
 
     if ($found_admin) {
-          echo "The found admin is: " . $found_admin;
+          echo "The found admin is : " . $found_admin;
       // Success
 
             // Mark user as logged in
