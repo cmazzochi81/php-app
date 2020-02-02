@@ -127,13 +127,16 @@ function password_encrypt($password) {
       // found admin, now check password
       if (password_check($password, $admin["hashed_password"])) {
         // password matches
+        echo "THE PASSWORD MATCHES!";
         return $admin;
       } else {
         // password does not match
+        echo "THE PASSWORD DOESN'T MATCH!";
         return false;
       }
     } else {
       // admin not found
+      echo "Did not find admin";
       return false;
     }
   }
