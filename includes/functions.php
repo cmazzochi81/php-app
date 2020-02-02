@@ -154,7 +154,7 @@ function password_encrypt($password) {
     $query .= "FROM admins ";
     $query .= "WHERE username = '{$safe_username}' ";
     $query .= "LIMIT 1";
-    $admin_set = mysqli_query($connection, $query);
+    $admin_set = mysqli_query($database->connection, $query);
     confirm_query($admin_set);
     if($admin = mysqli_fetch_assoc($admin_set)) {
       return $admin;
