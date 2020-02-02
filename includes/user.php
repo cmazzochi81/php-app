@@ -6,11 +6,11 @@ require_once(LIB_PATH.DS.'database.php');
 class User extends DatabaseObject {
     
     protected static $table_name="admins";
-    protected static $db_fields = array('id', 'username', 'password', 'first_name', 'last_name');
+    protected static $db_fields = array('id', 'username', 'hashed_password', 'first_name', 'last_name');
     
     public $id;
     public $username;
-    public $password;
+    public $hashed_password;
     public $first_name;
     public $last_name;
     
