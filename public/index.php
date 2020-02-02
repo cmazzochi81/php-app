@@ -1,6 +1,6 @@
 <?php
 require_once("../includes/initialize.php");
-require_once("../includes/database.php");
+
 $database = new MySQLDatabase();
 
 var_dump($database->connection);
