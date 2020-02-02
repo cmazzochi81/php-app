@@ -1,5 +1,5 @@
 <?php require_once("../../includes/session.php"); ?>
-<?php //require_once("../../includes/database_object.php"); ?>
+<?php require_once("../../includes/database_object.php"); ?>
 <?php require_once("../../includes/functions.php"); ?>
 <?php require_once("../../includes/validation_functions.php"); ?>
 <?php //confirm_logged_in(); ?>
@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
 <div id="main">
   
   <div id="page">
-    <?php //echo message(); ?>
+    <?php echo message(); ?>
     <?php //echo form_errors($errors); ?>
     
     <h2>Create Admin</h2>
