@@ -6,6 +6,7 @@
 <?php
 if($session->is_logged_in()){redirect_to("index.php");}
 if (!($session->is_logged_in())){echo "not logged in";}
+
 $username="";
   if (isset($_POST['submit'])) {
 
@@ -17,15 +18,16 @@ $username="";
         $username = $_POST["username"];
         $password = $_POST["password"];
         
+        echo $username;
         $found_admin = attempt_login($username, $password);
 
     if ($found_admin) {
       
       // Success
-       $session->login($found_admin);
+
             // Mark user as logged in
-            // $_SESSION["admin_id"] = $found_admin["id"];
-            // $_SESSION["username"] = $found_admin["username"];
+            $_SESSION["admin_id"] = $found_admin["id"];
+            $_SESSION["username"] = $found_admin["username"];
       redirect_to("index.php");
     } else {
       // Failure
