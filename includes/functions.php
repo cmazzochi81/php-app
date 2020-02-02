@@ -112,9 +112,12 @@ function password_encrypt($password) {
     echo "Running Password Check";
     // existing hash contains format and salt at start
     $hash = crypt($password, $existing_hash);
+    echo "The crypted hash is ";
     if ($hash === $existing_hash) {
+      echo "The hashes match.";
       return true;
     } else {
+      echo "The hashes just don't match";
       return false;
     }
   }
