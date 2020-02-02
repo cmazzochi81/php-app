@@ -18,7 +18,7 @@ $username="";
         $username = $_POST["username"];
         $password = $_POST["password"];
         
-        echo $username;
+        echo "The username is:  " . $username;
         $found_admin = attempt_login($username, $password);
 
     if ($found_admin) {
