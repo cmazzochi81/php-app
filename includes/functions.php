@@ -147,8 +147,8 @@ function password_encrypt($password) {
   }
 
   function find_admin_by_username($username) {
-    global $connection;
-    $safe_username = mysqli_real_escape_string($connection, $username);
+    global $database;
+    $safe_username = mysqli_real_escape_string($database->connection, $username);
     
     $query  = "SELECT * ";
     $query .= "FROM admins ";
