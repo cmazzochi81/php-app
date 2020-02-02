@@ -1,6 +1,6 @@
 <?php require_once("../../includes/initialize.php"); ?>
 <?php //if (!$session->is_logged_in()) {redirect_to("login.php");} ?>
-<?php confirm_logged_in(); ?>
+<?php //confirm_logged_in(); ?>
 
 <?php
   $admin_set = User::find_all();
