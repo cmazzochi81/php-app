@@ -2,7 +2,7 @@
 require_once("db_credentials.php");
 class MySQLDatabase{
 
-    private $connection;
+    public $connection;
     
     function __construct(){
         $this->open_connection();
