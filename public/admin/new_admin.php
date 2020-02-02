@@ -9,8 +9,7 @@
 <?php //confirm_logged_in(); ?>
 
 <?php
-$database = new MySQLDatabase();
-var_dump($database->connection);
+
 
 if (isset($_POST['submit'])) {
   // Process the form
