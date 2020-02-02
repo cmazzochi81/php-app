@@ -1,11 +1,16 @@
+<?php require_once("../../includes/initialize.php"); ?>
 <?php require_once("../../includes/session.php"); ?>
+
 <?php require_once("../../includes/database.php"); ?>
+
 <?php require_once("../../includes/database_object.php"); ?>
 <?php require_once("../../includes/functions.php"); ?>
 <?php require_once("../../includes/validation_functions.php"); ?>
 <?php //confirm_logged_in(); ?>
 
 <?php
+$database = new MySQLDatabase();
+var_dump($database->connection);
 
 if (isset($_POST['submit'])) {
   // Process the form
