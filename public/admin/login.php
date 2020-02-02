@@ -41,8 +41,8 @@ $username="";
 <a href="../index.php">&laquo; Back</a><br />
 <div id="loginFormContainer" class="clearfix">
     <p id="loginP">Login</p>
-    <?php //echo form_errors($errors); ?>
-    <?php //echo output_message(); ?>
+    <?php echo form_errors($errors); ?>
+    <?php echo output_message(); ?>
 
     <form id="loginForm" action="login.php" method="post">
 
