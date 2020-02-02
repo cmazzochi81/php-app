@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
     // Perform Create
 
     $username = mysql_prep($_POST["username"]);
+    var_dump($username);
     $hashed_password = password_encrypt($_POST["password"]);
     
     $query  = "INSERT INTO admins (";
@@ -32,6 +33,7 @@ if (isset($_POST['submit'])) {
     $query .= ") VALUES (";
     $query .= "  '{$username}', '{$hashed_password}'";
     $query .= ")";
+    $database = new MySQLDatabase();
     var_dump($database->connection);
     $result = mysqli_query($database->connection, $query);
 
