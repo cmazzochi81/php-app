@@ -1,6 +1,6 @@
 <?php
 require_once("../includes/initialize.php");
-
+var_dump($connection);
 //$photos = Photograph::find_all();
 $layout_context = "public";
 include_layout_template('header.php');
