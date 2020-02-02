@@ -1,5 +1,9 @@
 <?php
- 
+
+require_once("database.php");
+
+ $database = new MySQLDatabase();
+
 function strip_zeros_from_date( $marked_string="" ) {
   // first remove the marked zeros
   $no_zeros = str_replace('*0', '', $marked_string);
@@ -16,8 +20,8 @@ function redirect_to( $location = NULL ) {
 }
 
 function mysql_prep($string) {
-    global $connection;
-    $escaped_string = mysqli_real_escape_string($connection, $string);
+    global $database;
+    $escaped_string = mysqli_real_escape_string($database->connection, $string);
     return $escaped_string;
   }
 function output_message($message="") {
