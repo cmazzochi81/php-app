@@ -109,6 +109,7 @@ function password_encrypt($password) {
   }
   
   function password_check($password, $existing_hash) {
+    echo "Running Password Check";
     // existing hash contains format and salt at start
     $hash = crypt($password, $existing_hash);
     if ($hash === $existing_hash) {
