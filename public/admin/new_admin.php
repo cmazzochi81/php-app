@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
 <div id="main">
   
   <div id="page">
-    <?php echo message(); ?>
+    <?php //echo message(); ?>
     <?php //echo form_errors($errors); ?>
     
     <h2>Create Admin</h2>
