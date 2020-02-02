@@ -5,7 +5,7 @@
 
 <?php
 if($session->is_logged_in()){redirect_to("index.php");}
-
+if ! ($session->is_logged_in()){echo "not logged in";}
 $username="";
   if (isset($_POST['submit'])) {
 
