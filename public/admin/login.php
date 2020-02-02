@@ -22,9 +22,10 @@ $username="";
     if ($found_admin) {
       
       // Success
+       $session->login($found_admin);
             // Mark user as logged in
-            $_SESSION["admin_id"] = $found_admin["id"];
-            $_SESSION["username"] = $found_admin["username"];
+            // $_SESSION["admin_id"] = $found_admin["id"];
+            // $_SESSION["username"] = $found_admin["username"];
       redirect_to("index.php");
     } else {
       // Failure

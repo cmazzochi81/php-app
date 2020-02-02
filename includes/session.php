@@ -10,6 +10,16 @@ class Session{
         session_start();
         $this->check_login();
     }
+
+     private function check_login(){
+        if(isset($_SESSION['admin_id'])){
+            $this->admin_id = $_SESSION['admin_id'];
+            $this->logged_in = true;
+        }else{
+            unset($this->admin_id);
+            $this->logged_in = false;
+        }
+    }
     
     public function is_logged_in(){
         return $this->logged_in;
@@ -54,15 +64,7 @@ class Session{
 	//   }
 	// }
     
-    private function check_login(){
-        if(isset($_SESSION['admin_id'])){
-            $this->admin_id = $_SESSION['admin_id'];
-            $this->logged_in = true;
-        }else{
-            unset($this->admin_id);
-            $this->logged_in = false;
-        }
-    }
+   
     
 }
 
