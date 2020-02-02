@@ -31,6 +31,7 @@ $username="";
       redirect_to("index.php");
     } else {
       // Failure
+      echo "The admin was not found.";
       $_SESSION["message"] = "Username/password not found.";
     }
   }
