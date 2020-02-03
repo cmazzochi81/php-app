@@ -55,7 +55,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {color: #00648c;}
+a:hover {color: #fff;}
 
 b,
 strong {font-weight: 700;}
@@ -262,9 +262,6 @@ header h3{
   -webkit-border-radius: 6px 6px 6px 6px;
 }
 
-#navigation li{
-  color: #fff !important;
-}
 .selected{font-weight: bold;}
 
 #listPhotosTable{
