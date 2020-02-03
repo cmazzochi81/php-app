@@ -40,7 +40,7 @@ $layout_context = "public";
             <header class="clearfix">
               
                 <h1>Chris Mazzochi Web Designs</h1>
-                <h3 class="date"><?php echo date("l F dS"); ?><br />
+                <h3 class="date"><?php echo date("l F jS"); ?><br />
                     <?php
                     if ($layout_context == "admin") {
                         echo "Logged in as Administrator";
