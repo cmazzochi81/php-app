@@ -9,7 +9,9 @@ $config = require('config.php');
 //S3
 $s3 = S3Client::factory([
     'key' => $config['s3']['key'],
-    'secret' => $config['s3']['secret']
+    'secret' => $config['s3']['secret'],
+    'region' => $config['s3']['region'],
+    'version' => $config['s3']['version']
 ]);
 
 class Photograph extends DatabaseObject {
