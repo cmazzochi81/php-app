@@ -108,12 +108,12 @@ function password_encrypt($password) {
     return $salt;
   }
   
-  function password_check($password, $existing_hash) {
+  function password_check($password, $existing_hash ) {
     echo "Running Password Check with: ";
     echo $password;
     echo $existing_hash;
     // existing hash contains format and salt at start
-    $hash = password_hash($password, $existing_hash);
+    $hash = password_hash($password, PASSWORD_BCRYPT);
     echo "The crypted hash is " . $hash;
     if ($hash === $existing_hash) {
       echo "The hashes match.";
