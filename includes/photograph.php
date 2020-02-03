@@ -1,9 +1,8 @@
 <?php
 require_once(LIB_PATH . DS . 'database.php');
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 use Aws\S3\S3Client;
-use Aws\S3\Exception\S3Exception;
 
 $config = require('config.php');
 
@@ -24,6 +23,7 @@ class Photograph extends DatabaseObject {
     public $size;
     public $caption;
     private $temp_path;
+    // protected $upload_dir = "images";
     protected $upload_dir = "images";
     public $errors = array();
     protected $upload_errors = array(
@@ -88,8 +88,8 @@ class Photograph extends DatabaseObject {
             }
 
             // Determine the target_path
-            $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
-
+            //$target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
+            $target_path = SITE_ROOT . DS . $this->upload_dir . DS . $this->filename;
             // Make sure a file doesn't already exist in the target location
             if (file_exists($target_path)) {
                 $this->errors[] = "The file {$this->filename} already exists.";
@@ -99,22 +99,6 @@ class Photograph extends DatabaseObject {
             // Attempt to move the file 
             if (move_uploaded_file($this->temp_path, $target_path)) {
                 // Success
-
-                try{
-
-                    $s3->putObject([
-                        'Bucket' => $config['s3']['bucket'],
-                        'Key' => "uploads/{$filename}",
-                        'Body' => fopen($this->temp_path, 'rb'),
-                        'ACL' => 'public-read'
-                    ]);
-
-
-                }catch(S3Exception $e){
-                    die("There was an error uploading the photo to S3.");
-                }
-
-
                 // Save a corresponding entry to the database
                 if ($this->create()) {
                     // We are done with temp_path, the file isn't there anymore
