@@ -3,18 +3,19 @@ require_once(LIB_PATH . DS . 'database.php');
 require(SITE_ROOT . DS . 'vendor/autoload.php');
 use Aws\S3\S3Client;
 
- $config = require('config.php');
-
- $s3 = S3Client::factory([
-        'key' => $config['s3']['key'],
-        'secret' => $config['s3']['secret'],
-        'region' => $config['s3']['region'],
-        'version' => $config['s3']['version']
-    ]);
+ 
 
 class Photograph extends DatabaseObject {
 
     //S3
+    public $config = require('config.php');
+
+     public $s3 = S3Client::factory([
+            'key' => $config['s3']['key'],
+            'secret' => $config['s3']['secret'],
+            'region' => $config['s3']['region'],
+            'version' => $config['s3']['version']
+        ]);
    
 
     protected static $table_name = "photographs";
@@ -92,7 +93,7 @@ class Photograph extends DatabaseObject {
 
             // Determine the target_path
             //$target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
-            $target_path = SITE_ROOT . DS . $this->upload_dir . DS . $this->filename;
+            // $target_path = SITE_ROOT . DS . $this->upload_dir . DS . $this->filename;
             // Make sure a file doesn't already exist in the target location
             if (file_exists($target_path)) {
                 $this->errors[] = "The file {$this->filename} already exists.";
@@ -105,8 +106,8 @@ class Photograph extends DatabaseObject {
 
                 try{
 
-                    $s3->putObject([
-                        'Bucket' => $config['s3']['bucket'],
+                    $this->s3->putObject([
+                        'Bucket' => $this->config['s3']['bucket'],
                         'Key' => "uploads/{$filename}",
                         'Body' => fopen($temp_path, 'rb'),
                         'ACL' => 'public-read'
