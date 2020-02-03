@@ -13,6 +13,7 @@ $message="";
     <?php echo output_message($message);?>
     <div id="navigation">
          <ul>
+           <li><a href="../index.php">Public View</a></li>
            <li><a href="list_photos.php">List Photos</a></li>
            <li><a href="list_admins.php">List Admins</a></li>
            <li><a href="logout.php">Logout</a></li>
