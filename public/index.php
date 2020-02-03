@@ -40,9 +40,11 @@ $message = "";
         <ul class="clearfix">
             <li class="links linkHome"><a class="active" href="index.php">Home</a></li>
             <li class="links linkGallery"><a href="gallery.php">Gallery</a></li>
-            <li class="links linkJava"><a href="https://mazzo-java-app.scalingo.io/" target="_blank">Java App</a></li>
-            <li class="links linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/" target="_blank">Angular App</a></li>
-            <li class="links linkNet"><a href="https://corridormdtest.azurewebsites.net/" target="_blank">.NET App</a></li>
+            <li class="linkJava"><a href="http://play-auction-app.osc-fr1.scalingo.io/">Java App<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/">Angular App<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkNet"><a href="https://mazzo-react-test.herokuapp.com/">React Demo<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkNet"><a href="https://vue-mazzo.herokuapp.com/">Vue Demo<i class="fa fa-angle-right"></i></a></li>
+
             <?php
             if (!$session->is_logged_in()) {
                 echo("<li class = \"links loginLogout\"><a href=\"admin/login.php\">Login</a></li>");
