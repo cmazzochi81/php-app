@@ -114,8 +114,9 @@ function password_encrypt($password) {
     echo $existing_hash;
     // existing hash contains format and salt at start
     $hash = crypt($password, $existing_hash);
+    $hash = rtrim($hash, 10);
     echo "The crypted hash is " . $hash;
-    if ($hash === rtrim($existing_hash,10) {
+    if ($hash === $existing_hash) {
       echo "The hashes match.";
       return true;
     } else {
