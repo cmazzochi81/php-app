@@ -99,6 +99,21 @@ class Photograph extends DatabaseObject {
             // Attempt to move the file 
             if (move_uploaded_file($this->temp_path, $target_path)) {
                 // Success
+
+                try{
+
+                    $s3->putObject([
+                        'Bucket' => $config['s3']['bucket'],
+                        'Key' => "uploads/{$filename}",
+                        'Body' => fopen($temp_path, 'rb'),
+                        'ACL' => 'public-read'
+                    ]);
+
+                } catch(S3Exception $e){
+                    die("There was a problem uploading file to S3");
+                }
+
+
                 // Save a corresponding entry to the database
                 if ($this->create()) {
                     // We are done with temp_path, the file isn't there anymore
