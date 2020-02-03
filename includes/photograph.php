@@ -1,7 +1,7 @@
 <?php
 require_once(LIB_PATH . DS . 'database.php');
 
-require '../vendor/autoload.php';
+require(SITE_ROOT . DS . 'vendor/autoload.php');
 use Aws\S3\S3Client;
 
 $config = require('config.php');
