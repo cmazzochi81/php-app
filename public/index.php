@@ -82,7 +82,7 @@ $message = "";
 
                 <h3><span class="subhead">Technology News</span></h3>
                 <div class="feedDiv">
-                    <script type="text/javascript" src="http://feed.informer.com/widgets/NKMJYXDSOV.js"></script>
+                    <script type="text/javascript" src="https://feed.informer.com/widgets/NKMJYXDSOV.js"></script>
                     <noscript><a href="https://feed.informer.com/widgets/NKMJYXDSOV.html">"Wired Magazine 1"</a>
                     </noscript>
                 </div>
