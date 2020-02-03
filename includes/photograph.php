@@ -3,19 +3,20 @@ require_once(LIB_PATH . DS . 'database.php');
 require(SITE_ROOT . DS . 'vendor/autoload.php');
 use Aws\S3\S3Client;
 
- 
-
-class Photograph extends DatabaseObject {
-
-    //S3
-    public $config = require('config.php');
-
-     public $s3 = S3Client::factory([
+$config = require('config.php');
+$s3 = S3Client::factory([
             'key' => $config['s3']['key'],
             'secret' => $config['s3']['secret'],
             'region' => $config['s3']['region'],
             'version' => $config['s3']['version']
         ]);
+
+class Photograph extends DatabaseObject {
+
+    //S3
+    
+
+     
    
 
     protected static $table_name = "photographs";
@@ -106,8 +107,8 @@ class Photograph extends DatabaseObject {
 
                 try{
 
-                    $this->s3->putObject([
-                        'Bucket' => $this->config['s3']['bucket'],
+                    global $s3->putObject([
+                        'Bucket' => global $config['s3']['bucket'],
                         'Key' => "uploads/{$filename}",
                         'Body' => fopen($temp_path, 'rb'),
                         'ACL' => 'public-read'
