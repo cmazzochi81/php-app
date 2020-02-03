@@ -21,8 +21,8 @@ $message = "";
             <li class="linkGallery"><a href="gallery.php">Gallery <i class="fa fa-angle-right"></i></a></li>
             <li class="linkJava"><a href="http://play-auction-app.osc-fr1.scalingo.io/">Java App<i class="fa fa-angle-right"></i></a></li>
             <li class="linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/">Angular App<i class="fa fa-angle-right"></i></a></li>
-            <li class="linkNet"><a href="https://mazzo-react-test.herokuapp.com/">React Demo<i class="fa fa-angle-right"></i></a></li>
-            <li class="linkNet"><a href="https://vue-mazzo.herokuapp.com/">Vue Demo<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkReact"><a href="https://mazzo-react-test.herokuapp.com/">React Demo<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkVue"><a href="https://vue-mazzo.herokuapp.com/">Vue Demo<i class="fa fa-angle-right"></i></a></li>
              
 
             <?php
