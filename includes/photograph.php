@@ -1,8 +1,17 @@
 <?php
-
-// If it's going to need the database, then it's 
-// probably smart to require it before we start.
 require_once(LIB_PATH . DS . 'database.php');
+
+require 'vendor/autoload.php';
+use Aws\S3\S3Client;
+use Aws\S3\Exception\S3Exception;
+
+$config = require('config.php');
+
+//S3
+$s3 = S3Client::factory([
+    'key' => $config['s3']['key'],
+    'secret' => $config['s3']['secret']
+]);
 
 class Photograph extends DatabaseObject {
 
@@ -28,6 +37,8 @@ class Photograph extends DatabaseObject {
         UPLOAD_ERR_CANT_WRITE => "Can't write to disk.",
         UPLOAD_ERR_EXTENSION => "File upload stopped by extension."
     );
+
+     
 
     // Pass in $_FILE(['uploaded_file']) as an argument
     public function attach_file($file) {
@@ -88,6 +99,22 @@ class Photograph extends DatabaseObject {
             // Attempt to move the file 
             if (move_uploaded_file($this->temp_path, $target_path)) {
                 // Success
+
+                try{
+
+                    $s3->putObject([
+                        'Bucket' => $config['s3']['bucket'],
+                        'Key' => "uploads/{$filename}",
+                        'Body' => fopen($this->temp_path, 'rb'),
+                        'ACL' => 'public-read'
+                    ]);
+
+
+                }catch(S3Exception $e){
+                    die("There was an error uploading the photo to S3.");
+                }
+
+
                 // Save a corresponding entry to the database
                 if ($this->create()) {
                     // We are done with temp_path, the file isn't there anymore
