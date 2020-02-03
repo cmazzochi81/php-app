@@ -51,11 +51,11 @@ h6 {
   
 ----------------------------------------------------------------------------- */
 a {
-  color: #28aadc;
+  color: #fff;
   text-decoration: none;
 }
 
-a:hover {color: #fff;}
+a:hover {color: #28aadc;}
 
 b,
 strong {font-weight: 700;}
