@@ -19,9 +19,12 @@ $message = "";
         <ul style="padding-left:0px;">
             <li class="linkHome"><a href="index.php">Home <i class="fa fa-angle-right"></i></a></li>
             <li class="linkGallery"><a href="gallery.php">Gallery <i class="fa fa-angle-right"></i></a></li>
-            <li class="linkJava"><a href="https://mazzo-java-app.scalingo.io/">Java Auction App<i class="fa fa-angle-right"></i></a></li>
-            <li class="linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/">Angular Blog App<i class="fa fa-angle-right"></i></a></li>
-            <li class="linkNet"><a href="https://corridormdtest.azurewebsites.net/">.NET ClientApp<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkJava"><a href="http://play-auction-app.osc-fr1.scalingo.io/">Java App<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/">Angular App<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkNet"><a href="https://mazzo-react-test.herokuapp.com/">React Demo<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkNet"><a href="https://vue-mazzo.herokuapp.com/">Vue Demo<i class="fa fa-angle-right"></i></a></li>
+             <li class="linkNet"><a href="">Angular Tables<i class="fa fa-angle-right"></i></a></li>
+
             <?php
             if (!$session->is_logged_in()) {
                 echo("<li class=\"loginLogout fa fa-angle-right\"><a href=\"admin/login.php\">Login</a></li>");
