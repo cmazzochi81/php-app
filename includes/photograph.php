@@ -8,12 +8,7 @@ $config = require('config.php');
 class Photograph extends DatabaseObject {
 
     //S3
-    public $s3 = S3Client::factory([
-            'key' => $config['s3']['key'],
-            'secret' => $config['s3']['secret'],
-            'region' => $config['s3']['region'],
-            'version' => $config['s3']['version']
-        ]);
+
 
     protected static $table_name = "photographs";
     protected static $db_fields = array('id','filename', 'type', 'size', 'caption');
@@ -64,6 +59,13 @@ class Photograph extends DatabaseObject {
     }
 
     public function save() {
+
+         $s3 = S3Client::factory([
+            'key' => $config['s3']['key'],
+            'secret' => $config['s3']['secret'],
+            'region' => $config['s3']['region'],
+            'version' => $config['s3']['version']
+        ]);
         // A new record won't have an id yet.
         if (isset($this->id)) {
           //if(!empty($this->id)){
