@@ -113,7 +113,7 @@ function password_encrypt($password) {
     echo $password;
     echo $existing_hash;
     // existing hash contains format and salt at start
-    $hash = password_hash($password, MD5);
+    $hash = crypt($password, MD5);
     echo "The crypted hash is " . $hash;
     if ($hash === $existing_hash) {
       echo "The hashes match.";
