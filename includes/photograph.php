@@ -26,7 +26,7 @@ class Photograph extends DatabaseObject {
     public $caption;
     private $temp_path;
     // protected $upload_dir = "images";
-    protected $upload_dir = "images";
+    // protected $upload_dir = "images";
     public $errors = array();
     protected $upload_errors = array(
         // http://www.php.net/manual/en/features.file-upload.errors.php
