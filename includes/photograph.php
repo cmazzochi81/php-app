@@ -3,17 +3,16 @@ require_once(LIB_PATH . DS . 'database.php');
 
 require(SITE_ROOT . DS . 'vendor/autoload.php');
 use Aws\S3\S3Client;
+ $config = require('config.php');
 
 class Photograph extends DatabaseObject {
 
-    $config = require('config.php');
-
     //S3
     $s3 = S3Client::factory([
-        'key' => $config['s3']['key'],
-        'secret' => $config['s3']['secret'],
-        'region' => $config['s3']['region'],
-        'version' => $config['s3']['version']
+        'key' => global $config['s3']['key'],
+        'secret' => global $config['s3']['secret'],
+        'region' => global $config['s3']['region'],
+        'version' => global $config['s3']['version']
     ]);
 
     protected static $table_name = "photographs";
