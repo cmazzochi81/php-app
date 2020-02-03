@@ -7,7 +7,7 @@
 ?>
 <?php include_layout_template('admin_header.php'); ?>
 <?php echo output_message($message); ?>
-<a id="backButton" style="margin-left:20px;" href="index.php">&laquo; Back</a><br />
+<a id="backButton" style="margin-left:20px;color:#000;" href="index.php">&laquo; Back</a><br />
 <h2 style="margin-left:25%;">Photographs</h2>
 
 <table id="listPhotosTable">
