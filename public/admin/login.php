@@ -6,7 +6,7 @@
 <?php
 if($session->is_logged_in()){redirect_to("index.php");}
 
-if (!($session->is_logged_in())){echo "You are not logged in.  ";}
+//if (!($session->is_logged_in())){echo "You are not logged in.  ";}
 
 $username="";
 

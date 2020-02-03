@@ -1,7 +1,7 @@
 <?php
 require_once("../includes/initialize.php");
-$database = new MySQLDatabase();
-var_dump($database->connection);
+// $database = new MySQLDatabase();
+// var_dump($database->connection);
 //$photos = Photograph::find_all();
 $layout_context = "public";
 include_layout_template('header.php');
