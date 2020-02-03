@@ -67,15 +67,15 @@ $message = "";
             <div id="latest_news" class="col-md-4 col-lg-4">
                 <h3><span class="subhead">Art News</span></h3>
                 <div class="feedDiv">
-                    <script type="text/javascript" src="http://feed.informer.com/widgets/QQBNOWHDBU.js"></script>
-                    <noscript><a href="http://feed.informer.com/widgets/QQBNOWHDBU.html">"Art Forum Mag Widget 1"</a>
+                    <script type="text/javascript" src="https://feed.informer.com/widgets/QQBNOWHDBU.js"></script>
+                    <noscript><a href="https://feed.informer.com/widgets/QQBNOWHDBU.html">"Art Forum Mag Widget 1"</a>
                     </noscript>
                 </div>
 
                 <h3><span class="subhead">Music News</span></h3>
                 <div class="feedDiv">
-                    <script type="text/javascript" src="http://feed.informer.com/widgets/8HGMCLGXFO.js"></script>
-                    <noscript><a href="http://feed.informer.com/widgets/8HGMCLGXFO.html">"Rolling Stone Music News 1"</a>
+                    <script type="text/javascript" src="https://feed.informer.com/widgets/8HGMCLGXFO.js"></script>
+                    <noscript><a href="https://feed.informer.com/widgets/8HGMCLGXFO.html">"Rolling Stone Music News 1"</a>
                     </noscript>
 
                 </div>
@@ -83,7 +83,7 @@ $message = "";
                 <h3><span class="subhead">Technology News</span></h3>
                 <div class="feedDiv">
                     <script type="text/javascript" src="http://feed.informer.com/widgets/NKMJYXDSOV.js"></script>
-                    <noscript><a href="http://feed.informer.com/widgets/NKMJYXDSOV.html">"Wired Magazine 1"</a>
+                    <noscript><a href="https://feed.informer.com/widgets/NKMJYXDSOV.html">"Wired Magazine 1"</a>
                     </noscript>
                 </div>
             </div><!--End latest news  div-->
