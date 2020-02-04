@@ -20,35 +20,27 @@
     <table id="listPhotosTable">
          <a style="color:#000;" id="uploadText" href="photo_upload.php">Upload a new photograph</a>
         <tr>
-           <!--  <th>Image</th> -->
+            <th>Id</th>
+            <th>Image</th>
             <th>Filename</th>
             <th>Caption</th>
             <th>Size</th>
             <th>Type</th>
-            <!-- <th>Comments</th>
-            <th>Id</th> -->
-           
         </tr>
         <?php foreach ($photos as $photo): ?>
             <tr>
-               <!--  <td><img src="../<?php //echo $photo->image_path(); ?>" width="100" /></td> -->
+                <td><?php echo $photo->id ?></td> 
+                <td><img src="../<?php echo $photo->image_path(); ?>" width="100" /></td>
                 <td><?php echo $photo->filename; ?></td>
                 <td><?php echo $photo->caption; ?></td>
                 <td><?php echo $photo->size_as_text(); ?></td>
                 <td><?php echo $photo->type; ?></td>
-                <!-- <td style="text-align:center;"><a href="comments.php?id=<?php echo $photo->id;  ?>">
-                <?php echo count($photo->comments());  ?>
-                </a>
-                </td> 
-                <td><?php echo $photo->id ?></td> -->
+               
                 <td><a style="color:#000"  href="delete_photo.php?id=<?php echo $photo->id; ?>"
-                    onclick = "return confirm('Are you sure?');">Delete</a></td>
+                    onclick = "return confirm('Are you sure?');">Delete</a></td> 
             </tr>
         <?php endforeach ?>
     </table>
-                <br />
-               
-
     </div><!--end page div -->
 </div><!--end main div-->
 <?php include("../layouts/footer.php"); ?>
