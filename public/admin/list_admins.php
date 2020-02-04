@@ -4,6 +4,7 @@
 
 <?php
   $admin_set = User::find_all();
+  var_dump($admin_set);
   $message = "";
 ?>
 
