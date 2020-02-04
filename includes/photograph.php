@@ -84,7 +84,7 @@ class Photograph extends DatabaseObject {
             }
 
             // Attempt to move the file 
-            if (move_uploaded_file($this->temp_path, $this->target_path)) {
+            if (move_uploaded_file($this->temp_path, $target_path)) {
                 // Success
                 // Save a corresponding entry to the database
                 if ($this->create()) {
