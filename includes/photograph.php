@@ -49,6 +49,11 @@ class Photograph extends DatabaseObject {
         }
     }
 
+    // Common Database Methods
+    public static function find_all() {
+        return self::find_by_sql("SELECT * FROM ".self::$table_name);
+  }
+
     public function save() {
         // A new record won't have an id yet.
         if (isset($this->id)) {
