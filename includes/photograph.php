@@ -2,6 +2,7 @@
 require_once(LIB_PATH . DS . 'database.php');
 
 class Photograph extends DatabaseObject {
+
     protected static $table_name = "photographs";
     protected static $db_fields = array('id','filename', 'type', 'size', 'caption');
 
@@ -105,7 +106,8 @@ class Photograph extends DatabaseObject {
             // then remove the file
             // Note that even though the database entry is gone, this object 
             // is still around (which lets us use $this->image_path()).
-            $target_path = SITE_ROOT . DS . 'public' . DS . $this->image_path();
+            //$target_path = SITE_ROOT . DS . 'public' . DS . $this->image_path();
+             $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . $this->filename;
             return unlink($target_path) ? true : false;
         } else {
             // database delete failed
