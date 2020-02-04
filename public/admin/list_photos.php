@@ -1,9 +1,9 @@
-<?php require_once("../../includes/database_object.php");?>
 <?php require_once("../../includes/initialize.php"); ?>
 <?php if (!$session->is_logged_in()) {redirect_to("login.php");} ?>
 
 <?php
     $photos = Photograph::find_all();
+    var_dump($photos);
     $message = "";
 ?>
 <?php include_layout_template('admin_header.php'); ?>
