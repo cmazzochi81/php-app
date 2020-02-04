@@ -12,10 +12,10 @@ class Photograph extends DatabaseObject {
     public $size;
     public $caption;
     private $temp_path;
-    protected $upload_dir = "images";
+    public $upload_dir = "images";
     // protected $upload_dir = "images";
     public $errors = array();
-    protected $upload_errors = array(
+    public $upload_errors = array(
         UPLOAD_ERR_OK => "No errors.",
         UPLOAD_ERR_INI_SIZE => "Larger than upload_max_filesize.",
         UPLOAD_ERR_FORM_SIZE => "Larger than form MAX_FILE_SIZE.",
