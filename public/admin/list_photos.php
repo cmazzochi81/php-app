@@ -18,6 +18,7 @@
     <h2 style="margin-left:25%;">Photographs</h2>
 
     <table id="listPhotosTable">
+         <a style="color:#000;" id="uploadText" href="photo_upload.php">Upload a new photograph</a>
         <tr>
            <!--  <th>Image</th> -->
             <th>Filename</th>
@@ -46,7 +47,7 @@
         <?php endforeach ?>
     </table>
                 <br />
-                <a style="color:#000" id="uploadText" href="photo_upload.php">Upload a new photograph</a>
+               
 
     </div><!--end page div -->
 </div><!--end main div-->
