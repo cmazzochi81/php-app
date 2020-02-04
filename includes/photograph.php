@@ -75,7 +75,7 @@ class Photograph extends DatabaseObject {
             }
 
             // Determine the target_path
-            $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . $this->filename;
+            $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir;
             // $target_path = SITE_ROOT . DS . $this->upload_dir . DS . $this->filename;
             // Make sure a file doesn't already exist in the target location
             if (file_exists($target_path)) {
