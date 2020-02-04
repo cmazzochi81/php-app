@@ -25,7 +25,9 @@ $message="";
 if (isset($_POST['submit'])) {
     $photo = new Photograph();
     $photo->caption = $_POST['caption'];
+    echo "attempting to attach file now";
     $photo->attach_file($_FILES['file_upload']);
+
     if ($photo->save()) {
         // Success
         $session->message("Photograph uploaded successfully.");

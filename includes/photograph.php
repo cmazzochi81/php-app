@@ -12,10 +12,10 @@ class Photograph extends DatabaseObject {
     public $size;
     public $caption;
     private $temp_path;
-    public $upload_dir = "images";
+    protected $upload_dir = "images";
     // protected $upload_dir = "images";
     public $errors = array();
-    public $upload_errors = array(
+    protected $upload_errors = array(
         UPLOAD_ERR_OK => "No errors.",
         UPLOAD_ERR_INI_SIZE => "Larger than upload_max_filesize.",
         UPLOAD_ERR_FORM_SIZE => "Larger than form MAX_FILE_SIZE.",
@@ -80,7 +80,7 @@ class Photograph extends DatabaseObject {
             }
 
             // Determine the target_path
-            $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . $this->filename;
+            $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS. ;
             // $target_path = SITE_ROOT . DS . $this->upload_dir . DS . $this->filename;
             // Make sure a file doesn't already exist in the target location
             if (file_exists($target_path)) {
