@@ -26,8 +26,7 @@ class Photograph extends DatabaseObject {
         UPLOAD_ERR_EXTENSION => "File upload stopped by extension."
     );
 
-     
-
+    
     // Pass in $_FILE(['uploaded_file']) as an argument
     public function attach_file($file) {
         // Perform error checking on the form parameters
@@ -93,7 +92,7 @@ class Photograph extends DatabaseObject {
                     $s3->putObject([
                         'Bucket' => $config['s3']['bucket'],
                         'Key' => "uploads/{$filename}",
-                        'Body' => fopen($temp_path, 'rb'),
+                        'Body' => fopen($this->temp_path, 'rb'),
                         'ACL' => 'public-read'
                     ]);
 
