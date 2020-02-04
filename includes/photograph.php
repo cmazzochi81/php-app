@@ -1,15 +1,7 @@
 <?php
 require_once(LIB_PATH . DS . 'database.php');
-require(SITE_ROOT . DS . 'vendor/autoload.php');
-use Aws\S3\S3Client;
-
-$config = require('config.php');
 
 class Photograph extends DatabaseObject {
-
-    //S3
-
-
     protected static $table_name = "photographs";
     protected static $db_fields = array('id','filename', 'type', 'size', 'caption');
 
@@ -59,13 +51,6 @@ class Photograph extends DatabaseObject {
     }
 
     public function save() {
-
-         $s3 = S3Client::factory([
-            'key' => $config['s3']['key'],
-            'secret' => $config['s3']['secret'],
-            'region' => $config['s3']['region'],
-            'version' => $config['s3']['version']
-        ]);
         // A new record won't have an id yet.
         if (isset($this->id)) {
           //if(!empty($this->id)){
@@ -105,8 +90,8 @@ class Photograph extends DatabaseObject {
 
                 try{
 
-                    global $s3->putObject([
-                        'Bucket' => global $config['s3']['bucket'],
+                    $s3->putObject([
+                        'Bucket' => $config['s3']['bucket'],
                         'Key' => "uploads/{$filename}",
                         'Body' => fopen($temp_path, 'rb'),
                         'ACL' => 'public-read'
