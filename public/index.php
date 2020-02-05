@@ -19,10 +19,10 @@ $message = "";
         <ul style="padding-left:0px;">
             <li class="linkHome"><a href="index.php">Home <i class="fa fa-angle-right"></i></a></li>
             <li class="linkGallery"><a href="gallery.php">Gallery <i class="fa fa-angle-right"></i></a></li>
-            <li class="linkJava"><a href="http://play-auction-app.osc-fr1.scalingo.io/">Java App<i class="fa fa-angle-right"></i></a></li>
-            <li class="linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/">Angular App<i class="fa fa-angle-right"></i></a></li>
-            <li class="linkReact"><a href="https://mazzo-react-test.herokuapp.com/">React Demo<i class="fa fa-angle-right"></i></a></li>
-            <li class="linkVue"><a href="https://vue-mazzo.herokuapp.com/">Vue Demo<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkJava"><a href="http://play-auction-app.osc-fr1.scalingo.io/" target="_blank">Java App<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/" target="_blank">Angular App<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkReact"><a href="https://mazzo-react-test.herokuapp.com/" target="_blank">React Demo<i class="fa fa-angle-right"></i></a></li>
+            <li class="linkVue"><a href="https://vue-mazzo.herokuapp.com/" target="_blank">Vue Demo<i class="fa fa-angle-right"></i></a></li>
              
 
             <?php
@@ -42,13 +42,13 @@ $message = "";
 
             <li class="links linkGallery"><a href="gallery.php">Gallery</a></li>
 
-            <li class="links linkJava"><a href="http://play-auction-app.osc-fr1.scalingo.io/">Java App<i class="fa fa-angle-right"></i></a></li>
+            <li class="links linkJava"><a href="http://play-auction-app.osc-fr1.scalingo.io/" target="_blank">Java App<i class="fa fa-angle-right"></i></a></li>
 
-            <li class="links linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/">Angular App<i class="fa fa-angle-right"></i></a></li>
+            <li class="links linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/" target="_blank">Angular App<i class="fa fa-angle-right"></i></a></li>
 
-            <li class="links linkReact"><a href="https://mazzo-react-test.herokuapp.com/">React Demo<i class="fa fa-angle-right"></i></a></li>
+            <li class="links linkReact"><a href="https://mazzo-react-test.herokuapp.com/" target="_blank">React Demo<i class="fa fa-angle-right"></i></a></li>
 
-            <li class="links linkVue"><a href="https://vue-mazzo.herokuapp.com/">Vue Demo<i class="fa fa-angle-right"></i></a></li>
+            <li class="links linkVue"><a href="https://vue-mazzo.herokuapp.com/">Vue Demo<i class="fa fa-angle-right" target="_blank"></i></a></li>
 
             <?php
             if (!$session->is_logged_in()) {
