@@ -46,6 +46,8 @@ $message = "";
 
             <li class="links linkAngular"><a href="https://mazzo-angular-app.herokuapp.com/" target="_blank">Angular App<i class="fa fa-angle-right"></i></a></li>
 
+             <li class="links linkAngularTable"><a href="https://employee-table-app.herokuapp.com/" target="_blank">Angular Tables<i class="fa fa-angle-right"></i></a></li>
+
             <li class="links linkReact"><a href="https://mazzo-react-test.herokuapp.com/" target="_blank">React Demo<i class="fa fa-angle-right"></i></a></li>
 
             <li class="links linkVue"><a href="https://vue-mazzo.herokuapp.com/" target="_blank">Vue Demo<i class="fa fa-angle-right"></i></a></li>
