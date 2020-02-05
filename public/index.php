@@ -48,7 +48,7 @@ $message = "";
 
             <li class="links linkReact"><a href="https://mazzo-react-test.herokuapp.com/" target="_blank">React Demo<i class="fa fa-angle-right"></i></a></li>
 
-            <li class="links linkVue"><a href="https://vue-mazzo.herokuapp.com/">Vue Demo<i class="fa fa-angle-right" target="_blank"></i></a></li>
+            <li class="links linkVue"><a href="https://vue-mazzo.herokuapp.com/" target="_blank">Vue Demo<i class="fa fa-angle-right"></i></a></li>
 
             <?php
             if (!$session->is_logged_in()) {
