@@ -1,5 +1,12 @@
 <?php
 require_once(LIB_PATH . DS . 'database.php');
+require('../vendor/autoload.php');
+$s3 = new Aws\S3\S3Client([
+    'version'  => '2006-03-01',
+    'region'   => 'us-east-1',
+]);
+
+$bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
 
 class Photograph extends DatabaseObject {
 
@@ -12,7 +19,8 @@ class Photograph extends DatabaseObject {
     public $size;
     public $caption;
     private $temp_path;
-    protected $upload_dir = "images";
+    // protected $upload_dir = "images";
+    protected $upload_dir;
     // protected $upload_dir = "images";
     public $errors = array();
     protected $upload_errors = array(
@@ -80,8 +88,13 @@ class Photograph extends DatabaseObject {
             }
 
             // Determine the target_path
-            $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
+            
+             // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
+            $target_path = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
+
+            // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
             // $target_path = SITE_ROOT . DS . $this->upload_dir . DS . $this->filename;
+
             // Make sure a file doesn't already exist in the target location
             if (file_exists($target_path)) {
                 $this->errors[] = "The file {$this->filename} already exists.";

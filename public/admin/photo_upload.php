@@ -1,14 +1,10 @@
 <?php
 require_once('../../includes/initialize.php');
 // $config = require('../../config.php');
-// require('../../vendor/autoload.php');
-// use Aws\S3\S3Client;
-// $s3 = S3Client::factory([
-//             'key' => $config['s3']['key'],
-//             'secret' => $config['s3']['secret'],
-//             'region' => $config['s3']['region'],
-//             'version' => $config['s3']['version']
-//         ]);
+
+
+
+
 
 if (!$session->is_logged_in()) {
     redirect_to("login.php");
