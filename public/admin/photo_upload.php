@@ -1,11 +1,6 @@
 <?php
 require_once('../../includes/initialize.php');
 // $config = require('../../config.php');
-
-
-
-
-
 if (!$session->is_logged_in()) {
     redirect_to("login.php");
 }

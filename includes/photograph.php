@@ -91,7 +91,7 @@ class Photograph extends DatabaseObject {
             // Determine the target_path
 
              // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
-            $target_path = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
+            $target_path = $this->s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
 
             // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
             // $target_path = SITE_ROOT . DS . $this->upload_dir . DS . $this->filename;
