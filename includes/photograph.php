@@ -6,7 +6,7 @@ $s3 = new Aws\S3\S3Client([
     'version'  => '2006-03-01',
     'region'   => 'us-east-1',
 ]);
-
+var_dump($s3);
 $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
 class Photograph extends DatabaseObject {
 
