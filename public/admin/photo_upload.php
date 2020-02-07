@@ -31,6 +31,8 @@ if (isset($_POST['submit'])) {
         S3::ACL_PUBLIC_READ,
         array(),
         array(),
+        S3::STORAGE_CLASS_RRS
+
     );
 
 
