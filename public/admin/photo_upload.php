@@ -21,18 +21,16 @@ if (isset($_POST['submit'])) {
     $photo->caption = $_POST['caption'];
     echo "attempting to attach file now";
 
-
-    $pic = $_FILES['file_upload'];
     $s3 = new S3('AKIA22GH7JT3WNQTKPXV','QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u', 'region: us-west-2');
-    $new_name = time() . '.txt';
+    // $new_name = time() . '.txt';
 
     S3::putObject(
-        $pic,
+        $_FILES['file_upload'],
         'mazzo-php-app',
-        $new_name,
+        // $new_name,
         S3::ACL_PUBLIC_READ,
         array(),
-        array()
+        array() 
     );
 
 
