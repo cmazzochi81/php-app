@@ -27,18 +27,18 @@ if (isset($_POST['submit'])) {
     $client = S3Client::factory(
     array(
     'key'    => "AKIA22GH7JT3WNQTKPXV",
-    'secret' => "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"
+    'secret' => "QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u", 
+    'region' => 'us-west-2',
+    'version' => '2006-03-01'
     )
     );
 
     try {
     $client->putObject(array(
     'Bucket'=>'mazzo-php-app',
-    'Key' =>  '',
+    'Key' =>  $key,
     'SourceFile' => $_FILES['file_upload'],
     'StorageClass' => 'REDUCED_REDUNDANCY',
-    'region' => 'us-west-2',
-    'version' => '2006-03-01'
     ));
 
     } catch (S3Exception $e) {
