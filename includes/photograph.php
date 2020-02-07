@@ -33,6 +33,7 @@ class Photograph extends DatabaseObject {
     
     // Pass in $_FILE(['uploaded_file']) as an argument
     public function attach_file($file) {
+        var_dump($file);
         // Perform error checking on the form parameters
         if (!$file || empty($file) || !is_array($file)) {
             // error: nothing uploaded or wrong argument usage
