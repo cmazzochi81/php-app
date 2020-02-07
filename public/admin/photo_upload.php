@@ -1,6 +1,9 @@
 <?php
 require_once('../../includes/initialize.php');
-require_once(LIB_PATH . DS . 's3.php');
+// require_once(LIB_PATH . DS . 's3.php');
+require_once('../../vendor/autoload.php');
+use Aws\S3\S3Client;
+use Aws\S3\Exception\S3Exception;
 // $config = require('../../config.php');
 
 
@@ -19,21 +22,42 @@ $message="";
 if (isset($_POST['submit'])) {
     $photo = new Photograph();
     $photo->caption = $_POST['caption'];
+
+    // Set Amazon s3 credentials
+    $client = S3Client::factory(
+    array(
+    'key'    => "AKIA22GH7JT3WNQTKPXV",
+    'secret' => "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"
+    )
+    );
+
+    try {
+    $client->putObject(array(
+    'Bucket'=>'mazzo-php-app',
+    'Key' =>  '',
+    'SourceFile' => $_FILES['file_upload'],
+    'StorageClass' => 'REDUCED_REDUNDANCY'
+    ));
+
+    } catch (S3Exception $e) {
+    // Catch an S3 specific exception.
+    echo $e->getMessage();
+    }
     
 
-    $s3 = new S3('AKIA22GH7JT3WNQTKPXV','QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u', 'region: us-west-2');
-     $new_name = time() . '.png';
+    // $s3 = new S3('AKIA22GH7JT3WNQTKPXV','QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u', 'region: us-west-2');
+    //  $new_name = time() . '.png';
 
-    S3::putObject(
-        $_FILES['file_upload'],
-        'mazzo-php-app',
-        $new_name,
-        S3::ACL_PUBLIC_READ,
-        array(),
-        array(),
-        S3::STORAGE_CLASS_RRS
+    // S3::putObject(
+    //     $_FILES['file_upload'],
+    //     'mazzo-php-app',
+    //     $new_name,
+    //     S3::ACL_PUBLIC_READ,
+    //     array(),
+    //     array(),
+    //     S3::STORAGE_CLASS_RRS
 
-    );
+    // );
 
 
     $photo->attach_file($_FILES['file_upload']);
