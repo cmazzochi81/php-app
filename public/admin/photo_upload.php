@@ -19,8 +19,7 @@ $message="";
 if (isset($_POST['submit'])) {
     $photo = new Photograph();
     $photo->caption = $_POST['caption'];
-    var_dump($_FILES['file_upload']);
-    echo "attempting to attach file now";
+    
 
     $s3 = new S3('AKIA22GH7JT3WNQTKPXV','QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u', 'region: us-west-2');
      $new_name = time() . '.png';
