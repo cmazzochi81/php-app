@@ -59,7 +59,7 @@ class Photograph extends DatabaseObject {
   }
 
     public function save() {
-        var_dump($this->filename);
+      var_dump($_FILES['file_upload']);
         // $s3 = new Aws\S3\S3Client([
         // 'version'  => '2006-03-01',
         // 'region'   => 'us-east-1',
