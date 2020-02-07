@@ -36,7 +36,9 @@ if (isset($_POST['submit'])) {
     'Bucket'=>'mazzo-php-app',
     'Key' =>  '',
     'SourceFile' => $_FILES['file_upload'],
-    'StorageClass' => 'REDUCED_REDUNDANCY'
+    'StorageClass' => 'REDUCED_REDUNDANCY',
+    'Region' => 'us-west-2',
+    'Version' => '2006-03-01'
     ));
 
     } catch (S3Exception $e) {
