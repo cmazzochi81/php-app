@@ -1,13 +1,7 @@
 <?php
 require_once('../../includes/initialize.php');
 // $config = require('../../config.php');
-require(SITE_ROOT . DS . 'vendor/autoload.php');
-$s3 = new Aws\S3\S3Client([
-    'version'  => '2006-03-01',
-    'region'   => 'us-east-1',
-]);
 
-$bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
 
 if (!$session->is_logged_in()) {
     redirect_to("login.php");
@@ -26,7 +20,7 @@ if (isset($_POST['submit'])) {
     $photo->caption = $_POST['caption'];
     echo "attempting to attach file now";
     $photo->attach_file($_FILES['file_upload']);
-
+    echo "attempting to save file now";
     if ($photo->save()) {
         // Success
         $session->message("Photograph uploaded successfully.");

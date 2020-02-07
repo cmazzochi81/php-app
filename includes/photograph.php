@@ -1,7 +1,13 @@
 <?php
 require_once(LIB_PATH . DS . 'database.php');
 require_once(LIB_PATH . DS . 'initialize.php');
+require(SITE_ROOT . DS . 'vendor/autoload.php');
+$s3 = new Aws\S3\S3Client([
+    'version'  => '2006-03-01',
+    'region'   => 'us-east-1',
+]);
 
+$bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
 class Photograph extends DatabaseObject {
 
     protected static $table_name = "photographs";
@@ -84,7 +90,7 @@ class Photograph extends DatabaseObject {
             // Determine the target_path
 
              // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
-            $target_path = $this->s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
+            $target_path = global $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
 
             // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
             // $target_path = SITE_ROOT . DS . $this->upload_dir . DS . $this->filename;
