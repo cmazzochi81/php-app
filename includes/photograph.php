@@ -59,13 +59,13 @@ class Photograph extends DatabaseObject {
 
     public function save() {
 
-        $s3 = new Aws\S3\S3Client([
-        'version'  => '2006-03-01',
-        'region'   => 'us-east-1',
-        ]);
+        // $s3 = new Aws\S3\S3Client([
+        // 'version'  => '2006-03-01',
+        // 'region'   => 'us-east-1',
+        // ]);
 
-        $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
-        var_dump($bucket);
+        // $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
+        // var_dump($bucket);
         // A new record won't have an id yet.
         if (isset($this->id)) {
           //if(!empty($this->id)){
@@ -92,8 +92,9 @@ class Photograph extends DatabaseObject {
 
             // Determine the target_path
 
-             // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
-            $target_path = $this->s3->upload($this->bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
+            $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
+            
+            // $target_path = $this->s3->upload($this->bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
 
             // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
             // $target_path = SITE_ROOT . DS . $this->upload_dir . DS . $this->filename;
