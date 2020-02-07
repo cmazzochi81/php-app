@@ -37,8 +37,8 @@ if (isset($_POST['submit'])) {
     'Key' =>  '',
     'SourceFile' => $_FILES['file_upload'],
     'StorageClass' => 'REDUCED_REDUNDANCY',
-    'Region' => 'us-west-2',
-    'Version' => '2006-03-01'
+    'region' => 'us-west-2',
+    'version' => '2006-03-01'
     ));
 
     } catch (S3Exception $e) {
