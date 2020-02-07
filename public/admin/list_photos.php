@@ -3,7 +3,6 @@
 
 <?php
     $photos = Photograph::find_all();
-    var_dump($photos);
     $message = "";
 ?>
 <?php include_layout_template('admin_header.php'); ?>
