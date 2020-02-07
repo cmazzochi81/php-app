@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
     try {
     $client->putObject(array(
     'Bucket'=>'mazzo-php-app',
-    'Key' =>  $key,
+    'Key' =>  'AKIA22GH7JT3WNQTKPXV',
     'SourceFile' => $_FILES['file_upload'],
     'StorageClass' => 'REDUCED_REDUNDANCY',
     ));
