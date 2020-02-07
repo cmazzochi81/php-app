@@ -1,7 +1,7 @@
 <?php
 require_once(LIB_PATH . DS . 'database.php');
 require_once(LIB_PATH . DS . 'initialize.php');
-require_once(LIB_PATH . DS . 's3.php');
+
 // require(SITE_ROOT . DS . 'vendor/autoload.php');
 
 class Photograph extends DatabaseObject {
@@ -59,7 +59,7 @@ class Photograph extends DatabaseObject {
   }
 
     public function save() {
-      var_dump($_FILES['file_upload']);
+      // var_dump($_FILES['file_upload']);
         // $s3 = new Aws\S3\S3Client([
         // 'version'  => '2006-03-01',
         // 'region'   => 'us-east-1',
