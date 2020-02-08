@@ -1,10 +1,15 @@
 <?php
 require_once(LIB_PATH . DS . 'database.php');
 require_once(LIB_PATH . DS . 'initialize.php');
-require_once('s3.php');
+// require_once('s3.php');
+require '../vendor/autoload.php';
+
+
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 
+
+$config = require('config.php');
 class Photograph extends DatabaseObject {
 
     protected static $table_name = "photographs";
@@ -16,9 +21,7 @@ class Photograph extends DatabaseObject {
     public $size;
     public $caption;
     private $temp_path;
-    // protected $upload_dir = "images";
-    protected $upload_dir;
-    // protected $upload_dir = "images";
+    protected $upload_dir = "images";
     public $errors = array();
     protected $upload_errors = array(
         UPLOAD_ERR_OK => "No errors.",
@@ -88,22 +91,22 @@ class Photograph extends DatabaseObject {
             // Determine the target_path
 
 
-                $s3 = new S3('AKIA22GH7JT3WNQTKPXV','QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u', 'region: us-west-2');
-                 $new_name = time() . '.png';
+                // $s3 = new S3('AKIA22GH7JT3WNQTKPXV','QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u', 'region: us-west-2');
+                //  $new_name = time() . '.png';
 
-                S3::putObject(
-                    $_FILES['file_upload'],
-                    'mazzo-php-app',
-                    $new_name,
-                    S3::ACL_PUBLIC_READ,
-                    array(),
-                    array(),
-                    S3::STORAGE_CLASS_RRS
+                // S3::putObject(
+                //     $_FILES['file_upload'],
+                //     'mazzo-php-app',
+                //     $new_name,
+                //     S3::ACL_PUBLIC_READ,
+                //     array(),
+                //     array(),
+                //     S3::STORAGE_CLASS_RRS
 
-                );
+                // );
 
-            // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
-                $target_path = $s3;
+            $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
+             
             // $target_path = $this->s3->upload($this->bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
 
             // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
@@ -117,6 +120,20 @@ class Photograph extends DatabaseObject {
 
             // Attempt to move the file 
             if (move_uploaded_file($this->temp_path, $target_path)) {
+
+                try{
+                    $s3->putObject([
+                        'Bucket' => $config['s3']['bucket'],
+                        'Key' => 'uploads/{$name}',
+                        'Body' => fopen($this->temp_path, 'rb'),
+                        'ACL' => 'public-read'
+                    ]);
+
+                } catch(S3Exception $e){
+
+                    die("There was an error uploading the file.");
+                }
+
                 // Success
                 // Save a corresponding entry to the database
                 if ($this->create()) {
