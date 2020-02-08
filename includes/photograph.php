@@ -59,14 +59,7 @@ class Photograph extends DatabaseObject {
   }
 
     public function save() {
-      // var_dump($_FILES['file_upload']);
-        // $s3 = new Aws\S3\S3Client([
-        // 'version'  => '2006-03-01',
-        // 'region'   => 'us-east-1',
-        // ]);
-
-        // $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
-        // var_dump($bucket);
+  
         // A new record won't have an id yet.
         if (isset($this->id)) {
           //if(!empty($this->id)){
@@ -93,8 +86,23 @@ class Photograph extends DatabaseObject {
 
             // Determine the target_path
 
-            $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
 
+                $s3 = new S3('AKIA22GH7JT3WNQTKPXV','QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u', 'region: us-west-2');
+                 $new_name = time() . '.png';
+
+                S3::putObject(
+                    $_FILES['file_upload'],
+                    'mazzo-php-app',
+                    $new_name,
+                    S3::ACL_PUBLIC_READ,
+                    array(),
+                    array(),
+                    S3::STORAGE_CLASS_RRS
+
+                );
+
+            // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;
+                $target_path = $s3;
             // $target_path = $this->s3->upload($this->bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
 
             // $target_path = SITE_ROOT . DS . 'public' . DS . $this->upload_dir . DS . $this->filename;

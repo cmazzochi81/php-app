@@ -46,25 +46,10 @@ if (isset($_POST['submit'])) {
     // echo $e->getMessage();
     // }
     
-
-    // $s3 = new S3('AKIA22GH7JT3WNQTKPXV','QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u', 'region: us-west-2');
-    //  $new_name = time() . '.png';
-
-    // S3::putObject(
-    //     $_FILES['file_upload'],
-    //     'mazzo-php-app',
-    //     $new_name,
-    //     S3::ACL_PUBLIC_READ,
-    //     array(),
-    //     array(),
-    //     S3::STORAGE_CLASS_RRS
-
-    // );
-
-
     $photo->attach_file($_FILES['file_upload']);
     echo "attempting to save file now";
     if ($photo->save()) {
+
         // Success
         $session->message("Photograph uploaded successfully.");
         redirect_to('list_photos.php');
