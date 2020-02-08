@@ -24,27 +24,27 @@ if (isset($_POST['submit'])) {
     $photo->caption = $_POST['caption'];
 
     // Set Amazon s3 credentials
-    $client = S3Client::factory(
-    array(
-    'key'    => "AKIA22GH7JT3WNQTKPXV",
-    'secret' => "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", 
-    'region' => 'us-west-2',
-    'version' => '2006-03-01'
-    )
-    );
+    // $client = S3Client::factory(
+    // array(
+    // 'key'    => "AKIA22GH7JT3WNQTKPXV",
+    // 'secret' => "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", 
+    // 'region' => 'us-west-2',
+    // 'version' => '2006-03-01'
+    // )
+    // );
 
-    try {
-    $client->putObject(array(
-    'Bucket'=>'mazzo-php-app',
-    'Key' =>  'AKIA22GH7JT3WNQTKPXV',
-    'SourceFile' => $_FILES['file_upload'],
-    'StorageClass' => 'REDUCED_REDUNDANCY',
-    ));
+    // try {
+    // $client->putObject(array(
+    // 'Bucket'=>'mazzo-php-app',
+    // 'Key' =>  'AKIA22GH7JT3WNQTKPXV',
+    // 'SourceFile' => $_FILES['file_upload'],
+    // 'StorageClass' => 'REDUCED_REDUNDANCY',
+    // ));
 
-    } catch (S3Exception $e) {
-    // Catch an S3 specific exception.
-    echo $e->getMessage();
-    }
+    // } catch (S3Exception $e) {
+    // // Catch an S3 specific exception.
+    // echo $e->getMessage();
+    // }
     
 
     // $s3 = new S3('AKIA22GH7JT3WNQTKPXV','QToCKTyXybueM6OaL1NKOK8E4/PiFhXHJtTsfK9u', 'region: us-west-2');
