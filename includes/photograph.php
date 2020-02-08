@@ -1,8 +1,9 @@
 <?php
 require_once(LIB_PATH . DS . 'database.php');
 require_once(LIB_PATH . DS . 'initialize.php');
-
-// require(SITE_ROOT . DS . 'vendor/autoload.php');
+require_once('../vendor/autoload.php');
+use Aws\S3\S3Client;
+use Aws\S3\Exception\S3Exception;
 
 class Photograph extends DatabaseObject {
 

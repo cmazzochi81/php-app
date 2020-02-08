@@ -1,11 +1,5 @@
 <?php
 require_once('../../includes/initialize.php');
-// require_once(LIB_PATH . DS . 's3.php');
-require_once('../../vendor/autoload.php');
-use Aws\S3\S3Client;
-use Aws\S3\Exception\S3Exception;
-// $config = require('../../config.php');
-
 
 if (!$session->is_logged_in()) {
     redirect_to("login.php");
